@@ -47,7 +47,7 @@ export default function Support() {
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold font-['Outfit'] text-slate-900 mb-2">Support Center</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold font-['Outfit'] text-slate-900 mb-2">Support Center</h1>
         <p className="text-slate-500">How can we help you today? Send us a message below.</p>
       </div>
 
@@ -74,7 +74,7 @@ export default function Support() {
           )}
 
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-            <div className="p-6 md:p-8">
+            <div className="p-5 sm:p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-1.5">Subject</label>

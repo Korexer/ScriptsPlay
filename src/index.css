@@ -55,6 +55,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 h1,
 h2,
 h3,
@@ -583,6 +587,84 @@ img {
   color: var(--white);
 }
 
+.public-split-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.public-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.public-process-step {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.public-process-step-badge {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.public-article-card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.public-sidebar-card {
+  padding: 2.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.public-form-card {
+  padding: 3rem;
+}
+
+.public-cta-panel {
+  border-radius: var(--radius-xl);
+  padding: 4rem;
+}
+
+.public-dark-cta-card {
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+.public-icon-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.public-post-shell {
+  max-width: 800px;
+}
+
+.public-legal-shell {
+  max-width: 800px;
+}
+
+.public-mobile-only {
+  display: none;
+}
+
 /* Animations */
 .animate-up {
   opacity: 0;
@@ -594,5 +676,168 @@ img {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.95rem;
+  }
+
+  .page-header {
+    padding: 7rem 0 3rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .navbar.scrolled {
+    padding: 0.625rem 0;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding-top: 6.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .public-split-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .public-process-step {
+    gap: 1.25rem;
+    flex-direction: column;
+  }
+
+  .public-process-step-badge {
+    width: 58px;
+    height: 58px;
+    font-size: 1.5rem;
+  }
+
+  .public-article-card {
+    padding: 1.5rem;
+  }
+
+  .public-sidebar-card {
+    position: static;
+    top: auto;
+    padding: 1.5rem;
+  }
+
+  .public-form-card {
+    padding: 1.5rem;
+  }
+
+  .public-cta-panel {
+    padding: 1.5rem;
+  }
+
+  .public-dark-cta-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .public-icon-card {
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .public-mobile-stack {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .public-mobile-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem !important;
+  }
+
+  .public-mobile-title-xl {
+    font-size: 2.35rem !important;
+  }
+
+  .public-mobile-title-lg {
+    font-size: 2rem !important;
+  }
+
+  .public-mobile-body-lg {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .public-mobile-body-md {
+    font-size: 0.95rem !important;
+  }
+
+  .public-mobile-card-title {
+    font-size: 1.15rem !important;
+  }
+
+  .public-mobile-stat {
+    font-size: 2rem !important;
+  }
+
+  .public-mobile-media-height {
+    height: 160px !important;
+    padding: 1.25rem !important;
+  }
+
+  .public-mobile-inline-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .public-mobile-inline-meta span {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    border-left: 0 !important;
+  }
+
+  .public-post-shell,
+  .public-legal-shell {
+    max-width: 100%;
+  }
+
+  .public-post-body {
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .public-mobile-only {
+    display: block;
   }
 }

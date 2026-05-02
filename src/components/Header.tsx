@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                     <Link to="/services" className="nav-link">Service</Link>
                     <Link to="/blog" className="nav-link">Blog</Link>
                     <Link to="/contact" className="nav-link">Contact</Link>
-                    <Link to="/contact" className="btn btn-primary" style={{ padding: '0.5rem 1.25rem' }}>Get Started</Link>
+                    
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
                     <Link to="/services" className="nav-link" style={{ color: 'var(--primary-dark)', padding: '0.5rem 0' }} onClick={closeMenu}>Service</Link>
                     <Link to="/blog" className="nav-link" style={{ color: 'var(--primary-dark)', padding: '0.5rem 0' }} onClick={closeMenu}>Blog</Link>
                     <Link to="/contact" className="nav-link" style={{ color: 'var(--primary-dark)', padding: '0.5rem 0' }} onClick={closeMenu}>Contact</Link>
-                    <Link to="/contact" className="btn btn-primary" style={{ marginTop: '0.5rem', textAlign: 'center' }} onClick={closeMenu}>Get Started</Link>
+                    
                 </div>
             )}
         </header>

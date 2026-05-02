@@ -45,7 +45,7 @@ export const PortalLayout: React.FC<{ children: React.ReactNode }> = ({ children
       )}
 
       {/* Sidebar */}
-      <aside className={`fixed inset-y-0 left-0 bg-[#0f172a] text-white w-64 flex flex-col z-50 transform ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
+      <aside className={`fixed inset-y-0 left-0 bg-[#0f172a] text-white w-[88vw] max-w-64 flex flex-col z-50 transform ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:w-64 md:translate-x-0 transition-transform duration-300 ease-in-out`}>
         <div className="p-6 flex items-center justify-between border-b border-white/10">
           <Link to="/spworkersportal101/dashboard" className="text-2xl font-['Outfit'] font-bold tracking-tight flex items-center gap-2">
             <span className="text-[#f97316]">Scripts</span>Play
@@ -101,7 +101,7 @@ export const PortalLayout: React.FC<{ children: React.ReactNode }> = ({ children
 
       {/* Main content */}
       <main className="flex-1 flex flex-col md:ml-64 min-h-screen overflow-hidden">
-        <header className="bg-white border-b border-gray-200 h-16 flex items-center px-4 md:px-8 shrink-0 justify-between md:justify-end sticky top-0 z-30 shadow-sm">
+        <header className="bg-white border-b border-gray-200 min-h-16 flex items-center px-4 md:px-8 py-3 md:py-0 shrink-0 justify-between md:justify-end sticky top-0 z-30 shadow-sm">
           <button 
             className="md:hidden p-2 -ml-2 text-gray-600 hover:text-gray-900"
             onClick={() => setMobileMenuOpen(true)}
@@ -109,14 +109,14 @@ export const PortalLayout: React.FC<{ children: React.ReactNode }> = ({ children
             <Menu size={24} />
           </button>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             {!workerData?.access_granted && (
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 border border-red-200 shadow-sm">
+              <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-red-100 text-red-800 border border-red-200 shadow-sm">
                 Unlock Required
               </span>
             )}
             {workerData?.access_granted && (
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200 shadow-sm">
+              <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-green-100 text-green-800 border border-green-200 shadow-sm">
                 Access Active
               </span>
             )}

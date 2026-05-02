@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
                             <Play size={24} style={{ color: 'var(--accent-orange)' }} />
                             ScriptsPlay
                         </Link>
-                        <p style={{ maxWidth: '300px' }}>
+                        <p className="public-mobile-body-md" style={{ maxWidth: '300px' }}>
                             Trusted by large content creators and production studios to deliver fast, accurate transcripts and captions at scale.
                         </p>
                     </div>

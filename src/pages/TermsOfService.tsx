@@ -10,14 +10,14 @@ const TermsOfService: React.FC = () => {
             />
 
             <div className="page-header" style={{ padding: '6rem 0 3rem' }}>
-                <div className="container" style={{ maxWidth: '800px' }}>
+                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
                     <h1>Terms of Service</h1>
                     <p>Last updated: March 10, 2026</p>
                 </div>
             </div>
 
             <section className="section section-light">
-                <div className="container" style={{ maxWidth: '800px' }}>
+                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
                     <div style={{ color: 'var(--text-main)' }}>
                         <h2 className="mb-4 text-primary-dark">1. Service Terms</h2>
                         <p>By using the ScriptsPlay website and services, you agree to these Terms of Service. ScriptsPlay provides professional video transcription and captioning solutions. Turnaround times and specific service deliverables will be agreed upon in client contracts directly via email or our portal.</p>

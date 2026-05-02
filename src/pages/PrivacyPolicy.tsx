@@ -10,14 +10,14 @@ const PrivacyPolicy: React.FC = () => {
             />
 
             <div className="page-header" style={{ padding: '6rem 0 3rem' }}>
-                <div className="container" style={{ maxWidth: '800px' }}>
+                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
                     <h1>Privacy Policy</h1>
                     <p>Last updated: March 10, 2026</p>
                 </div>
             </div>
 
             <section className="section section-light">
-                <div className="container" style={{ maxWidth: '800px' }}>
+                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
                     <div style={{ color: 'var(--text-main)' }}>
                         <h2 className="mb-4 text-primary-dark">1. Data Collection</h2>
                         <p>We collect information that you provide securely to us when you apply for a transcriptionist role or submit an inquiry for services through our website. This may include your name, email address, resume data, and payment information securely stored by our third-party payment processors.</p>

@@ -23,7 +23,7 @@ const Blog: React.FC = () => {
 
                 <div className="container">
                     <div className="hero-content">
-                        <h1 style={{ fontSize: '3.5rem', color: 'var(--primary-blue-light)' }}>The ScriptsPlay Blog</h1>
+                        <h1 className="public-mobile-title-xl" style={{ fontSize: '3.5rem', color: 'var(--primary-blue-light)' }}>The ScriptsPlay Blog</h1>
                     </div>
                 </div>
             </section>
@@ -31,21 +31,21 @@ const Blog: React.FC = () => {
             <section className="section section-gray" style={{ position: 'relative', zIndex: 10 }}>
                 <div className="container" style={{ maxWidth: '1100px' }}>
 
-                    <div className="grid" style={{ gridTemplateColumns: '2fr 1fr', gap: '3rem' }}>
+                    <div className="public-split-layout">
 
                         {/* Main Articles List */}
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-                            <article className="card shadow-md" style={{ padding: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '4px solid var(--primary-blue-light)' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div className="public-stack" style={{ gap: '2.5rem' }}>
+                            <article className="card shadow-md public-article-card" style={{ padding: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '4px solid var(--primary-blue-light)' }}>
+                                <div className="public-mobile-inline-meta" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <span style={{ color: 'var(--primary-blue)', fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '1px' }}>SEO & Accessibility</span>
                                     <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontWeight: 500 }}>October 12, 2025</span>
                                 </div>
 
-                                <h2 style={{ fontSize: '2.25rem', marginTop: '0.5rem', marginBottom: '0.5rem', lineHeight: '1.3' }}>
+                                <h2 className="public-mobile-title-lg" style={{ fontSize: '2.25rem', marginTop: '0.5rem', marginBottom: '0.5rem', lineHeight: '1.3' }}>
                                     Why Accurate Video Transcription Matters for Content Creators
                                 </h2>
 
-                                <p style={{ fontSize: '1.125rem', color: 'var(--text-main)', marginBottom: '1.5rem', lineHeight: '1.7' }}>
+                                <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-main)', marginBottom: '1.5rem', lineHeight: '1.7' }}>
                                     Hitting publish is only half the battle. In this extensive breakdown, we explore how accessibility integrations and embedded SEO benefits compound exponentially for large-scale YouTube creators and enterprise media companies when their content is properly formatted and repurposed as text.
                                 </p>
 
@@ -58,17 +58,17 @@ const Blog: React.FC = () => {
                                 <Link to="/blog/why-accurate-video-transcription-matters" className="btn btn-outline" style={{ alignSelf: 'flex-start', padding: '0.75rem 2rem' }}>Read Full Article <ArrowRight size={18} /></Link>
                             </article>
 
-                            <article className="card shadow-md" style={{ padding: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '4px solid var(--accent-teal)' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <article className="card shadow-md public-article-card" style={{ padding: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '4px solid var(--accent-teal)' }}>
+                                <div className="public-mobile-inline-meta" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <span style={{ color: 'var(--accent-teal)', fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Audience Engagement</span>
                                     <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontWeight: 500 }}>August 22, 2025</span>
                                 </div>
 
-                                <h2 style={{ fontSize: '2.25rem', marginTop: '0.5rem', marginBottom: '0.5rem', lineHeight: '1.3' }}>
+                                <h2 className="public-mobile-title-lg" style={{ fontSize: '2.25rem', marginTop: '0.5rem', marginBottom: '0.5rem', lineHeight: '1.3' }}>
                                     How Professional Captioning Improves Audience Engagement
                                 </h2>
 
-                                <p style={{ fontSize: '1.125rem', color: 'var(--text-main)', marginBottom: '1.5rem', lineHeight: '1.7' }}>
+                                <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-main)', marginBottom: '1.5rem', lineHeight: '1.7' }}>
                                     Internal research metrics clearly indicate that time-synced captioning directly influences viewer retention across all scrolling social platforms. Dive into the data detailing how optimizing for mobile silent viewing and accommodating global, non-native speaking audiences creates an unfair advantage.
                                 </p>
 
@@ -84,7 +84,7 @@ const Blog: React.FC = () => {
 
                         {/* Sidebar */}
                         <aside>
-                            <div className="card shadow-lg" style={{ background: 'var(--primary-dark)', color: 'white', padding: '2.5rem', position: 'sticky', top: '100px' }}>
+                            <div className="card shadow-lg public-sidebar-card" style={{ background: 'var(--primary-dark)', color: 'white', padding: '2.5rem', position: 'sticky', top: '100px' }}>
                                 <div style={{ background: 'rgba(249, 115, 22, 0.2)', width: '50px', height: '50px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
                                     <Mail size={24} style={{ color: 'var(--accent-orange)' }} />
                                 </div>

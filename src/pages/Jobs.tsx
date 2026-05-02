@@ -26,6 +26,7 @@ const Jobs: React.FC = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
+                            className="public-mobile-title-xl"
                             style={{ fontSize: '3.5rem', color: 'var(--accent-orange)' }}
                         >
                             Become a Transcriptionist
@@ -34,6 +35,7 @@ const Jobs: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
+                            className="public-mobile-body-lg"
                             style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', maxWidth: '700px' }}
                         >
                             Join our proprietary global network. Earn reliable money remotely by converting engaging audio to text, directly from your laptop.
@@ -129,10 +131,10 @@ const Jobs: React.FC = () => {
                     <div className="grid grid-cols-2 gap-8 mb-16">
                         <div className="glass p-8" style={{ padding: '3rem', borderRadius: 'var(--radius-xl)' }}>
                             <h3 style={{ marginBottom: '1.5rem', fontSize: '1.75rem', color: 'var(--primary-dark)' }}>Worker Promotion System</h3>
-                            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '1.125rem', lineHeight: '1.7' }}>
+                            <p className="public-mobile-body-lg" style={{ color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '1.125rem', lineHeight: '1.7' }}>
                                 Unlike other platforms where you're perpetually stuck at the bottom rung, ScriptsPlay actively evaluates all workers. We promote typists every two months based entirely on accuracy matrices, style consistency, typing speed, and reliability.
                             </p>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', padding: '1.5rem', background: 'var(--white)', borderRadius: 'var(--radius-lg)' }}>
+                            <div className="public-mobile-stack" style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', padding: '1.5rem', background: 'var(--white)', borderRadius: 'var(--radius-lg)' }}>
                                 <div style={{ padding: '0.5rem 1rem', background: 'var(--secondary-gray-dark)', color: 'var(--primary-dark)', borderRadius: 'var(--radius-md)', fontWeight: 700 }}>Entry</div>
                                 <ArrowRight size={20} style={{ color: 'var(--text-muted)' }} />
                                 <div style={{ padding: '0.5rem 1rem', background: 'var(--primary-blue-light)', color: 'white', borderRadius: 'var(--radius-md)', fontWeight: 700 }}>Professional</div>
@@ -143,7 +145,7 @@ const Jobs: React.FC = () => {
 
                         <div className="glass p-8" style={{ padding: '3rem', borderRadius: 'var(--radius-xl)' }}>
                             <h3 style={{ marginBottom: '1.5rem', fontSize: '1.75rem', color: 'var(--primary-dark)' }}>Reliable Payment Infrastructure</h3>
-                            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '1.125rem', lineHeight: '1.7' }}>
+                            <p className="public-mobile-body-lg" style={{ color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '1.125rem', lineHeight: '1.7' }}>
                                 You earned the money, so you should get paid predictably. We ensure our talent gets paid on time, every single time, processing payroll twice per month internally.
                             </p>
                             <div className="grid grid-cols-1 gap-4">
@@ -159,9 +161,9 @@ const Jobs: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="card text-center shadow-xl" style={{ padding: '5rem 3rem', background: 'var(--primary-dark)', color: 'white' }}>
-                        <h3 style={{ fontSize: '2.5rem', marginBottom: '1.25rem', color: 'white' }}>Ready to send your application?</h3>
-                        <p style={{ color: 'var(--secondary-gray-dark)', fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '650px', margin: '0 auto 3rem', lineHeight: '1.8' }}>
+                    <div className="card public-dark-cta-card shadow-xl" style={{ padding: '5rem 3rem', background: 'var(--primary-dark)', color: 'white' }}>
+                        <h3 className="public-mobile-title-xl" style={{ fontSize: '2.5rem', marginBottom: '1.25rem', color: 'white' }}>Ready to send your application?</h3>
+                        <p className="public-mobile-body-lg" style={{ color: 'var(--secondary-gray-dark)', fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '650px', margin: '0 auto 3rem', lineHeight: '1.8' }}>
                             We do not use an automated gatekeeper form. Apply directly by pitching your resume, cover letter, and your relevant typing experience directly to our hiring team's inbox.
                         </p>
 
@@ -176,7 +178,7 @@ const Jobs: React.FC = () => {
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-                            <a href="mailto:jobs@scriptsplay.com" className="btn btn-primary" style={{ padding: '1.25rem 4rem', fontSize: '1.25rem', fontWeight: 800 }}>
+                            <a href="mailto:jobs@scriptsplay.com" className="btn btn-primary public-mobile-body-lg" style={{ padding: '1.25rem 4rem', fontSize: '1.25rem', fontWeight: 800 }}>
                                 Email: jobs@scriptsplay.com
                             </a>
                         </div>

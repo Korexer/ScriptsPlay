@@ -38,10 +38,10 @@ const AboutUs: React.FC = () => {
                             viewport={{ once: true }}
                         >
                             <h2 className="mb-4">Our Mission</h2>
-                            <p style={{ fontSize: '1.125rem', color: 'var(--text-main)' }}>
+                            <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-main)' }}>
                                 ScriptsPlay aims to simplify transcription workflows for large-scale content production while creating remote work opportunities for skilled professionals worldwide.
                             </p>
-                            <p style={{ fontSize: '1.125rem', color: 'var(--text-main)' }}>
+                            <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-main)' }}>
                                 We believe that accurate text formatting makes the world's knowledge and entertainment universally accessible.
                             </p>
                         </motion.div>
@@ -95,10 +95,10 @@ const AboutUs: React.FC = () => {
                     <div className="grid grid-cols-2 gap-8 items-center">
                         <div>
                             <h2 className="mb-4">Our Workforce Model</h2>
-                            <p style={{ fontSize: '1.125rem', color: 'var(--secondary-gray-dark)', marginBottom: '1.5rem' }}>
+                            <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--secondary-gray-dark)', marginBottom: '1.5rem' }}>
                                 ScriptsPlay operates on a uniquely distributed worker model. We don't believe in centralized, restrictive office setups.
                             </p>
-                            <p style={{ fontSize: '1.125rem', color: 'var(--secondary-gray-dark)' }}>
+                            <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--secondary-gray-dark)' }}>
                                 We work directly with a network of trained transcriptionists and editors who collaborate through our secure, proprietary internal work system. This means faster turnaround for clients, and completely flexible work opportunities for our talent.
                             </p>
                         </div>

@@ -70,13 +70,13 @@ export default function TaskBoard() {
     <div className="space-y-6">
       <div className="flex items-end justify-between pe-1">
         <div>
-          <h1 className="text-3xl font-bold font-['Outfit'] text-slate-900">Available Tasks</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold font-['Outfit'] text-slate-900">Available Tasks</h1>
           <p className="text-slate-500 mt-1">Claim a project below to begin working.</p>
         </div>
       </div>
 
       {tasks.length === 0 ? (
-        <div className="bg-white border rounded-2xl p-12 text-center text-slate-500 shadow-sm border-slate-200">
+        <div className="bg-white border rounded-2xl p-8 sm:p-12 text-center text-slate-500 shadow-sm border-slate-200">
           <PlayCircle className="w-12 h-12 text-slate-300 mx-auto mb-4" />
           <h3 className="text-lg font-bold text-slate-700 font-['Outfit'] mb-2">No tasks available right now</h3>
           <p>Check back later for new transcription projects.</p>
@@ -88,9 +88,9 @@ export default function TaskBoard() {
             const estimatedPay = task.duration_minutes * currentRate;
 
             return (
-              <div key={task.id} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group flex flex-col">
+              <div key={task.id} className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group flex flex-col">
                 <div className="flex-1">
-                  <div className="flex justify-between items-start mb-4">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-start mb-4">
                     <span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-semibold tracking-wide uppercase">
                       {task.task_type || 'Transcription'}
                     </span>

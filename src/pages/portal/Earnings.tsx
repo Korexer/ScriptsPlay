@@ -81,7 +81,7 @@ export default function Earnings() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold font-['Outfit'] text-slate-900 mb-2">Earnings & Payments</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold font-['Outfit'] text-slate-900 mb-2">Earnings & Payments</h1>
         <p className="text-slate-500">Track your completed work and upcoming payments.</p>
       </div>
 
@@ -92,7 +92,7 @@ export default function Earnings() {
             <DollarSign className="w-6 h-6" />
           </div>
           <p className="text-sm font-medium text-slate-500 mb-1">Total Earned (All Time)</p>
-          <h2 className="text-3xl font-bold text-slate-900 font-['Outfit']">${totalEarned.toFixed(2)}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-['Outfit']">${totalEarned.toFixed(2)}</h2>
         </div>
 
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col items-center justify-center text-center">
@@ -100,7 +100,7 @@ export default function Earnings() {
             <Clock className="w-6 h-6" />
           </div>
           <p className="text-sm font-medium text-slate-500 mb-1">Pending Payment</p>
-          <h2 className="text-3xl font-bold text-slate-900 font-['Outfit']">${pendingPayment.toFixed(2)}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-['Outfit']">${pendingPayment.toFixed(2)}</h2>
           <p className="text-xs text-slate-400 mt-2">Will be deposited to {workerData?.payment_method}</p>
         </div>
 
@@ -109,7 +109,7 @@ export default function Earnings() {
             <CheckCircle2 className="w-6 h-6" />
           </div>
           <p className="text-sm font-medium text-slate-500 mb-1">Total Paid</p>
-          <h2 className="text-3xl font-bold text-slate-900 font-['Outfit']">${paidEarnings.toFixed(2)}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-['Outfit']">${paidEarnings.toFixed(2)}</h2>
         </div>
       </div>
 

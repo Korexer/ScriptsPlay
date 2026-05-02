@@ -12,19 +12,19 @@ const BlogPost2: React.FC = () => {
             />
 
             <div className="section section-light" style={{ paddingTop: '8rem' }}>
-                <div className="container" style={{ maxWidth: '800px' }}>
+                <div className="container public-post-shell" style={{ maxWidth: '800px' }}>
                     <Link to="/blog" className="btn btn-outline mb-8" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
                         <ArrowLeft size={16} /> Back to Blog
                     </Link>
 
-                    <div style={{ marginBottom: '2rem' }}>
+                    <div className="public-mobile-inline-meta" style={{ marginBottom: '2rem' }}>
                         <span style={{ color: 'var(--accent-teal)', fontWeight: 600, fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Audience Engagement</span>
                         <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginLeft: '1rem', borderLeft: '1px solid var(--border-color)', paddingLeft: '1rem' }}>August 22, 2025</span>
                     </div>
 
-                    <h1 style={{ fontSize: '3rem', marginBottom: '2rem' }}>How Professional Captioning Improves Audience Engagement</h1>
+                    <h1 className="public-mobile-title-xl" style={{ fontSize: '3rem', marginBottom: '2rem' }}>How Professional Captioning Improves Audience Engagement</h1>
 
-                    <div style={{ fontSize: '1.125rem', lineHeight: '1.8', color: 'var(--text-main)' }}>
+                    <div className="public-post-body" style={{ fontSize: '1.125rem', lineHeight: '1.8', color: 'var(--text-main)' }}>
                         <p className="mb-4">
                             Captioning is no longer an optional afterthought; it is a primary driver of sustained audience retention. As video consumption increasingly moves to mobile networks and public transit commutes, captions offer the necessary framework to capture attention rapidly.
                         </p>

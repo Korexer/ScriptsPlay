@@ -29,17 +29,17 @@ const Home: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h1 style={{ marginBottom: '1.5rem', fontWeight: 800, color: 'var(--accent-orange)' }}>Professional Video Transcription & Captioning at Scale</h1>
-                            <p style={{ fontSize: '1.25rem', marginBottom: '2.5rem', color: 'var(--secondary-gray-dark)', maxWidth: '600px' }}>
+                            <h1 className="public-mobile-title-xl" style={{ marginBottom: '1.5rem', fontWeight: 800, color: 'var(--accent-orange)' }}>Professional Video Transcription & Captioning at Scale</h1>
+                            <p className="public-mobile-body-lg" style={{ fontSize: '1.25rem', marginBottom: '2.5rem', color: 'var(--secondary-gray-dark)', maxWidth: '600px' }}>
                                 Trusted by large content creators and production studios to deliver fast, accurate transcripts and captions.
                             </p>
 
-                            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                                <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
+                            <div className="public-mobile-actions" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                                <Link to="/contact" className="btn btn-primary public-mobile-body-lg" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
                                     Request Service
                                     <ArrowRight size={20} />
                                 </Link>
-                                <Link to="/jobs" className="btn btn-outline" style={{ color: 'var(--white)', borderColor: 'rgba(255,255,255,0.3)', padding: '1rem 2rem', fontSize: '1.125rem' }}>
+                                <Link to="/jobs" className="btn btn-outline public-mobile-body-lg" style={{ color: 'var(--white)', borderColor: 'rgba(255,255,255,0.3)', padding: '1rem 2rem', fontSize: '1.125rem' }}>
                                     Work With Us
                                 </Link>
                             </div>
@@ -188,19 +188,19 @@ const Home: React.FC = () => {
                         <h2 className="mb-8">The ScriptsPlay Standard</h2>
                         <div className="grid grid-cols-4 gap-6">
                             <div>
-                                <h3 style={{ color: 'var(--accent-orange)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>99%</h3>
+                            <h3 className="public-mobile-stat" style={{ color: 'var(--accent-orange)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>99%</h3>
                                 <p>Accurate Transcripts</p>
                             </div>
                             <div>
-                                <h3 style={{ color: 'var(--primary-blue-light)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>100%</h3>
+                            <h3 className="public-mobile-stat" style={{ color: 'var(--primary-blue-light)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>100%</h3>
                                 <p>Secure Client Handling</p>
                             </div>
                             <div>
-                                <h3 style={{ color: 'var(--accent-teal)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>24/7</h3>
+                            <h3 className="public-mobile-stat" style={{ color: 'var(--accent-teal)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>24/7</h3>
                                 <p>Reliable Delivery</p>
                             </div>
                             <div>
-                                <h3 style={{ color: 'var(--white)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>10K+</h3>
+                            <h3 className="public-mobile-stat" style={{ color: 'var(--white)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>10K+</h3>
                                 <p>Professional Workforce</p>
                             </div>
                         </div>
@@ -211,11 +211,11 @@ const Home: React.FC = () => {
             {/* Work Opportunities */}
             <section className="section section-light">
                 <div className="container">
-                    <div className="glass p-8" style={{ borderRadius: 'var(--radius-xl)', padding: '4rem', background: 'linear-gradient(135deg, rgba(239, 246, 255, 1) 0%, rgba(219, 234, 254, 1) 100%)' }}>
+                    <div className="glass public-cta-panel" style={{ borderRadius: 'var(--radius-xl)', padding: '4rem', background: 'linear-gradient(135deg, rgba(239, 246, 255, 1) 0%, rgba(219, 234, 254, 1) 100%)' }}>
                         <div className="grid grid-cols-2 gap-8 items-center text-left">
                             <div>
                                 <h2 className="mb-4">Begin Your Remote Career</h2>
-                                <p style={{ fontSize: '1.125rem', color: 'var(--text-main)', marginBottom: '2rem' }}>
+                                <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-main)', marginBottom: '2rem' }}>
                                     ScriptsPlay hires transcriptionists, caption specialists, and editors worldwide. Join our distributed ecosystem and work flexibly from anywhere.
                                 </p>
                                 <Link to="/jobs" className="btn btn-primary bg-primary text-white">
@@ -245,7 +245,7 @@ const Home: React.FC = () => {
 
                     <div className="grid grid-cols-2 gap-8">
                         <Link to="/blog/why-accurate-video-transcription-matters" className="card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                            <div style={{ height: '200px', backgroundColor: 'var(--primary-blue)', padding: '2rem', display: 'flex', alignItems: 'flex-end' }}>
+                            <div className="public-mobile-media-height" style={{ height: '200px', backgroundColor: 'var(--primary-blue)', padding: '2rem', display: 'flex', alignItems: 'flex-end' }}>
                                 <span style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', padding: '0.25rem 0.75rem', borderRadius: 'var(--radius-full)', fontSize: '0.875rem' }}>SEO & Marketing</span>
                             </div>
                             <div style={{ padding: '2rem' }}>
@@ -256,7 +256,7 @@ const Home: React.FC = () => {
                         </Link>
 
                         <Link to="/blog/how-professional-captioning-improves-engagement" className="card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                            <div style={{ height: '200px', backgroundColor: 'var(--accent-teal)', padding: '2rem', display: 'flex', alignItems: 'flex-end' }}>
+                            <div className="public-mobile-media-height" style={{ height: '200px', backgroundColor: 'var(--accent-teal)', padding: '2rem', display: 'flex', alignItems: 'flex-end' }}>
                                 <span style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', padding: '0.25rem 0.75rem', borderRadius: 'var(--radius-full)', fontSize: '0.875rem' }}>Engagement</span>
                             </div>
                             <div style={{ padding: '2rem' }}>

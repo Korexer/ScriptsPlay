@@ -26,6 +26,7 @@ const Services: React.FC = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
+                            className="public-mobile-title-xl"
                             style={{ fontSize: '3.5rem', color: 'var(--accent-teal)' }}
                         >
                             Transcription & Captioning
@@ -34,6 +35,7 @@ const Services: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
+                            className="public-mobile-body-lg"
                             style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', maxWidth: '700px' }}
                         >
                             End-to-end media formatting solutions optimized for accuracy, privacy, and massive scale.
@@ -79,41 +81,41 @@ const Services: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-12">
-                        <div style={{ display: 'flex', gap: '3rem', alignItems: 'flex-start' }}>
-                            <div style={{ flexShrink: 0, width: '80px', height: '80px', background: 'var(--primary-blue-light)', color: 'white', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', fontWeight: 800 }}>1</div>
+                        <div className="public-process-step">
+                            <div className="public-process-step-badge" style={{ background: 'var(--primary-blue-light)' }}>1</div>
                             <div>
-                                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Bulk Submission & Routing</h3>
-                                <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+                                <h3 className="public-mobile-title-lg" style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Bulk Submission & Routing</h3>
+                                <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
                                     Clients submit batches of audio or video content securely through our infrastructure. Our internal routing system automatically calculates the complexity of the dialogue, the required turnaround time, and any specialized formatting instructions (like strict verbatim vs. clean read).
                                 </p>
                             </div>
                         </div>
 
-                        <div style={{ display: 'flex', gap: '3rem', alignItems: 'flex-start' }}>
-                            <div style={{ flexShrink: 0, width: '80px', height: '80px', background: 'var(--accent-teal)', color: 'white', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', fontWeight: 800 }}>2</div>
+                        <div className="public-process-step">
+                            <div className="public-process-step-badge" style={{ background: 'var(--accent-teal)' }}>2</div>
                             <div>
-                                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Distributed Task Processing</h3>
-                                <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+                                <h3 className="public-mobile-title-lg" style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Distributed Task Processing</h3>
+                                <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
                                     The workload is intelligently distributed in structured segments across our verified network of thousands of professional transcriptionists. This distributed architecture allows us to process 50 hours of content just as quickly as 1 hour—by scaling the human workforce in real-time.
                                 </p>
                             </div>
                         </div>
 
-                        <div style={{ display: 'flex', gap: '3rem', alignItems: 'flex-start' }}>
-                            <div style={{ flexShrink: 0, width: '80px', height: '80px', background: 'var(--accent-orange)', color: 'white', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', fontWeight: 800 }}>3</div>
+                        <div className="public-process-step">
+                            <div className="public-process-step-badge" style={{ background: 'var(--accent-orange)' }}>3</div>
                             <div>
-                                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Multi-Layer Editor Review</h3>
-                                <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+                                <h3 className="public-mobile-title-lg" style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Multi-Layer Editor Review</h3>
+                                <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
                                     Every transcribed segment is stitched back together and passed to our senior Quality Assurance Editors. They run extensive grammatical proofing, ensure perfect speaker tracking, and verify that the sync-timing on captions matches the visual cuts frame-by-frame.
                                 </p>
                             </div>
                         </div>
 
-                        <div style={{ display: 'flex', gap: '3rem', alignItems: 'flex-start' }}>
-                            <div style={{ flexShrink: 0, width: '80px', height: '80px', background: 'var(--primary-dark)', color: 'white', borderRadius: 'var(--radius-full)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', fontWeight: 800 }}>4</div>
+                        <div className="public-process-step">
+                            <div className="public-process-step-badge" style={{ background: 'var(--primary-dark)' }}>4</div>
                             <div>
-                                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Final Delivery & Export</h3>
-                                <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+                                <h3 className="public-mobile-title-lg" style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Final Delivery & Export</h3>
+                                <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
                                     We deliver the final, 99%+ accurate text in your preferred formats, ranging from standard `.txt` and `.docx` structures to specialized caption files like `.srt`, `.vtt`, or `.scc` optimized for broadcast environments.
                                 </p>
                             </div>
@@ -127,7 +129,7 @@ const Services: React.FC = () => {
                     <div className="grid grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Enterprise Security & Compliance</h2>
-                            <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', marginBottom: '2rem', lineHeight: '1.8' }}>
+                            <p className="public-mobile-body-lg" style={{ fontSize: '1.125rem', color: 'var(--text-muted)', marginBottom: '2rem', lineHeight: '1.8' }}>
                                 We understand that pre-release footage, documentary interviews, and enterprise communications are deeply confidential. ScriptsPlay adheres to strict operational security protocols.
                             </p>
                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -145,12 +147,12 @@ const Services: React.FC = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="card" style={{ background: 'var(--primary-dark)', color: 'white', padding: '4rem 3rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'white' }}>Ready for a custom quote?</h3>
-                            <p style={{ color: 'var(--secondary-gray-dark)', fontSize: '1.125rem', marginBottom: '2.5rem' }}>
+                        <div className="card public-dark-cta-card" style={{ background: 'var(--primary-dark)', color: 'white', padding: '4rem 3rem', textAlign: 'center' }}>
+                            <h3 className="public-mobile-title-lg" style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'white' }}>Ready for a custom quote?</h3>
+                            <p className="public-mobile-body-lg" style={{ color: 'var(--secondary-gray-dark)', fontSize: '1.125rem', marginBottom: '2.5rem' }}>
                                 Contact our enterprise sales team directly. We can arrange pilot testing to prove our speed and accuracy workflow on your real content.
                             </p>
-                            <a href="mailto:hello@scriptsplay.com" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem', width: '100%' }}>hello@scriptsplay.com</a>
+                            <a href="mailto:hello@scriptsplay.com" className="btn btn-primary public-mobile-body-lg" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem', width: '100%' }}>hello@scriptsplay.com</a>
                         </div>
                     </div>
                 </div>

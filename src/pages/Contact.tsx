@@ -76,11 +76,11 @@ const Contact: React.FC = () => {
                         {/* Contact Methods */}
                         <div>
                             <h2 className="mb-4">Contact Information</h2>
-                            <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.125rem' }}>
+                            <p className="public-mobile-body-lg" style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.125rem' }}>
                                 For security and privacy reasons, all worker applications and client service requests must be sent via email or through our verified portals.
                             </p>
 
-                            <div className="card mb-4" style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', padding: '2rem' }}>
+                            <div className="card mb-4 public-icon-card" style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', padding: '2rem' }}>
                                 <div style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)', padding: '1rem', borderRadius: 'var(--radius-full)' }}>
                                     <Mail size={24} style={{ color: 'var(--primary-blue-light)' }} />
                                 </div>
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="card mb-4" style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', padding: '2rem' }}>
+                            <div className="card mb-4 public-icon-card" style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', padding: '2rem' }}>
                                 <div style={{ backgroundColor: 'rgba(249, 115, 22, 0.1)', padding: '1rem', borderRadius: 'var(--radius-full)' }}>
                                     <Mail size={24} style={{ color: 'var(--accent-orange)' }} />
                                 </div>
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="card" style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', padding: '2rem' }}>
+                            <div className="card public-icon-card" style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', padding: '2rem' }}>
                                 <div style={{ backgroundColor: 'rgba(20, 184, 166, 0.1)', padding: '1rem', borderRadius: 'var(--radius-full)' }}>
                                     <MapPin size={24} style={{ color: 'var(--accent-teal)' }} />
                                 </div>
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="card" style={{ padding: '3rem' }}>
+                        <div className="card public-form-card" style={{ padding: '3rem' }}>
                             <h2 style={{ marginBottom: '2rem' }}>Send Us a Message</h2>
 
                             {formStatus === 'success' ? (

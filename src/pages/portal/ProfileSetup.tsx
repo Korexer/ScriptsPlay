@@ -51,7 +51,7 @@ export default function ProfileSetup() {
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
-        <h1 className="text-3xl font-bold font-['Outfit'] text-slate-900 mb-2">Profile Setup</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold font-['Outfit'] text-slate-900 mb-2">Profile Setup</h1>
         <p className="text-slate-500 mb-8">
           Please complete your profile details. Accurate information is required for payment processing.
         </p>
@@ -134,7 +134,7 @@ export default function ProfileSetup() {
             <button
               type="submit"
               disabled={saving}
-              className="inline-flex items-center justify-center px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-sm disabled:opacity-50 gap-2"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-sm disabled:opacity-50 gap-2"
             >
               {saving ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5" />}
               Save Profile

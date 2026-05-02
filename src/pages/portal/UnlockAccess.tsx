@@ -61,7 +61,7 @@ export default function UnlockAccess() {
 
   return (
     <div className="flex flex-col items-center justify-center max-w-lg mx-auto py-12 px-4 shadow-sm min-h-[70vh]">
-      <div className="bg-white rounded-3xl p-8 md:p-10 w-full shadow-xl shadow-slate-200/50 border border-slate-200 text-center relative overflow-hidden">
+      <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 w-full shadow-xl shadow-slate-200/50 border border-slate-200 text-center relative overflow-hidden">
         {/* Decor */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl transform -translate-x-1/2 -translate-y-1/2" />
@@ -71,7 +71,7 @@ export default function UnlockAccess() {
             <KeyRound size={32} />
           </div>
 
-          <h1 className="text-3xl font-bold font-['Outfit'] text-slate-900">Unlock Workspace</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold font-['Outfit'] text-slate-900">Unlock Workspace</h1>
           
           <p className="text-slate-600">
             Enter the special access code provided to you after certification to unlock the task board.
@@ -89,7 +89,7 @@ export default function UnlockAccess() {
               <input
                 type="text"
                 required
-                className="w-full px-5 py-4 border-2 border-slate-200 rounded-xl focus:ring-0 focus:border-orange-500 text-center text-xl font-bold font-mono tracking-widest text-slate-800 placeholder-slate-300 transition-colors uppercase outline-none"
+                className="w-full px-4 sm:px-5 py-4 border-2 border-slate-200 rounded-xl focus:ring-0 focus:border-orange-500 text-center text-lg sm:text-xl font-bold font-mono tracking-[0.2em] sm:tracking-widest text-slate-800 placeholder-slate-300 transition-colors uppercase outline-none"
                 placeholder="ENTER CODE"
                 value={code}
                 onChange={(e) => setCode(e.target.value)}

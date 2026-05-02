@@ -122,7 +122,7 @@ export default function TaskDetail() {
 
   if (success) {
     return (
-      <div className="bg-white rounded-2xl p-12 text-center shadow-sm border border-slate-200">
+      <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm border border-slate-200">
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
         <h2 className="text-2xl font-bold font-['Outfit'] text-slate-900 mb-2">Submission Successful!</h2>
         <p className="text-slate-600 mb-6">Your work has been safely uploaded and is pending review.</p>
@@ -137,7 +137,7 @@ export default function TaskDetail() {
     <div className="max-w-4xl mx-auto space-y-6">
       <button 
         onClick={() => navigate('/spworkersportal101/dashboard')} 
-        className="flex items-center text-slate-500 hover:text-blue-600 transition-colors bg-white px-4 py-2 rounded-lg shadow-sm w-fit border border-slate-200 font-medium"
+        className="flex items-center text-slate-500 hover:text-blue-600 transition-colors bg-white px-4 py-2 rounded-lg shadow-sm w-full sm:w-fit border border-slate-200 font-medium justify-center sm:justify-start"
       >
         <ArrowLeft className="w-4 h-4 mr-2" /> Back
       </button>
@@ -145,7 +145,7 @@ export default function TaskDetail() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
-            <h1 className="text-2xl font-bold font-['Outfit'] text-slate-900 mb-6">
+            <h1 className="text-xl sm:text-2xl font-bold font-['Outfit'] text-slate-900 mb-6">
               {task.title}
             </h1>
 
@@ -162,7 +162,7 @@ export default function TaskDetail() {
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
                     <Info className="w-12 h-12 text-slate-400 mb-4" />
                     <p className="font-medium text-lg">Video link provided</p>
-                    <a href={task.video_url} target="_blank" rel="noopener noreferrer" className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors border border-blue-500">
+                    <a href={task.video_url} target="_blank" rel="noopener noreferrer" className="mt-4 w-full sm:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors border border-blue-500 text-center">
                       Open in new tab
                     </a>
                   </div>
