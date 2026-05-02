@@ -46,6 +46,11 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--font-inter);
   background-color: var(--secondary-gray);
@@ -490,6 +495,36 @@ img {
 
   .mobile-menu-btn {
     display: block;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (min-width: 769px) {
+  .navbar {
+    padding: 0.55rem 0;
+  }
+
+  .navbar.scrolled {
+    padding: 0.45rem 0;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    gap: 0.4rem;
+    line-height: 1;
+  }
+
+  .logo svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    line-height: 1;
   }
 }
 
