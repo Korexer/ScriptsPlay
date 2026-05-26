@@ -8,6 +8,7 @@ ScriptsPlay is a modern, high-performance web platform for professional transcri
 *   **Icons & Animation**: Lucide React, Framer Motion
 *   **Routing**: React Router DOM (v7)
 *   **Backend & Database**: Supabase (Database, Auth, Edge Functions)
+*   **Email Infrastructure**: Cloudflare Email Routing & Gmail SMTP
 *   **Deployment**: Vercel (Frontend), Supabase (Edge Functions)
 
 ---
@@ -19,7 +20,10 @@ Before you begin, ensure you have the following installed:
 *   [npm](https://www.npmjs.com/) (packaged with Node.js)
 *   [Git](https://git-scm.com/)
 
-You will also need a **Supabase Project** to handle the database backend, email edge functions, and user authentication.
+You will also need:
+1.  A **Supabase Project** to handle the database backend, email edge functions, and user authentication.
+2.  A **Cloudflare Account** managing your custom domain (`scriptsplay.com`).
+3.  A **Gmail Account** configured with an App Password for secure SMTP sending.
 
 ---
 
@@ -54,6 +58,28 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_public_key
 npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+
+---
+
+## 📧 Email Infrastructure (Cloudflare & Gmail)
+
+The platform is designed to use a highly cost-effective, custom-domain email setup combining **Cloudflare Email Routing** and **Gmail SMTP**.
+
+### 1. Incoming Mail (Cloudflare Email Routing)
+To receive emails sent to `hello@scriptsplay.com` and `jobs@scriptsplay.com` directly in your personal Gmail inbox:
+1.  Configure your custom domain (`scriptsplay.com`) to use Cloudflare Nameservers.
+2.  Go to the **Email** section in your Cloudflare dashboard and enable **Email Routing**.
+3.  Add the following **Routing Rules**:
+    *   `hello@scriptsplay.com` ➔ Forward to `your_personal_gmail@gmail.com`
+    *   `jobs@scriptsplay.com` ➔ Forward to `your_personal_gmail@gmail.com`
+4.  Configure the auto-generated Cloudflare MX records in your Cloudflare DNS zone.
+
+### 2. Outgoing Mail & Edge Notifications (Gmail SMTP & App Passwords)
+To send emails securely *from* `hello@scriptsplay.com` or via the Supabase Edge Function:
+1.  Enable **2-Step Verification** on your Google Account.
+2.  Navigate to your Google Account Settings ➔ Security ➔ **App passwords**.
+3.  Generate a new App Password (select 'Other' and name it 'ScriptsPlay SMTP').
+4.  Use this 16-character app password along with your Gmail username as your SMTP credentials.
 
 ---
 
