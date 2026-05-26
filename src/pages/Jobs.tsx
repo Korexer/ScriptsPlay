@@ -86,7 +86,7 @@ const Jobs: React.FC = () => {
                                 <h3 style={{ marginBottom: '1.5rem', fontSize: '1.75rem' }}>Entry Level<br /><span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 500 }}>Transcriptionist</span></h3>
                                 <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>Perfect for typists new to the professional formatting space. You'll tackle straightforward YouTube videos and clear interviews.</p>
                                 <div style={{ marginBottom: '1.5rem', padding: '0.75rem 1rem', background: 'rgba(59, 130, 246, 0.05)', borderRadius: 'var(--radius-md)', border: '1px solid rgba(59, 130, 246, 0.1)' }}>
-                                    <span style={{ fontWeight: 700, color: 'var(--primary-blue-light)' }}>Pay Rate:</span> <span style={{ fontWeight: 600 }}>$1.80</span> <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>/ video min</span>
+                                    <span style={{ fontWeight: 700, color: 'var(--primary-blue-light)' }}>Pay Rate:</span> <span style={{ fontWeight: 600 }}>$2.60</span> <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>/ video min</span>
                                 </div>
                                 <div style={{ marginBottom: '2rem' }}>
                                     <p style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} style={{ color: 'var(--primary-blue-light)', flexShrink: 0, marginTop: '2px' }} /> Convert clear, spoken audio to text.</p>
@@ -102,7 +102,7 @@ const Jobs: React.FC = () => {
                                 <h3 style={{ marginBottom: '1.5rem', fontSize: '1.75rem' }}>Professional<br /><span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 500 }}>Transcriptionist</span></h3>
                                 <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>The sweet spot for experienced workers. Tackle enterprise workloads like corporate docs, complex jargon, and rapid-fire podcast panels.</p>
                                 <div style={{ marginBottom: '1.5rem', padding: '0.75rem 1rem', background: 'rgba(249, 115, 22, 0.05)', borderRadius: 'var(--radius-md)', border: '1px solid rgba(249, 115, 22, 0.1)' }}>
-                                    <span style={{ fontWeight: 700, color: 'var(--accent-orange)' }}>Pay Rate:</span> <span style={{ fontWeight: 600 }}>$2.40</span> <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>/ video min</span>
+                                    <span style={{ fontWeight: 700, color: 'var(--accent-orange)' }}>Pay Rate:</span> <span style={{ fontWeight: 600 }}>$3.50</span> <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>/ video min</span>
                                 </div>
                                 <div style={{ marginBottom: '2rem' }}>
                                     <p style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} style={{ color: 'var(--accent-orange)', flexShrink: 0, marginTop: '2px' }} /> Handle complex audio, cross-talk & jargon.</p>
@@ -117,7 +117,7 @@ const Jobs: React.FC = () => {
                                 <h3 style={{ marginBottom: '1.5rem', fontSize: '1.75rem' }}>Editor & Reviewer<br /><span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 500 }}>Quality Assurance</span></h3>
                                 <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>For grammatical experts. You won't be typing from scratch; instead, you review submitted drafts, fixing punctuation and structural errors.</p>
                                 <div style={{ marginBottom: '1.5rem', padding: '0.75rem 1rem', background: 'rgba(20, 184, 166, 0.05)', borderRadius: 'var(--radius-md)', border: '1px solid rgba(20, 184, 166, 0.1)' }}>
-                                    <span style={{ fontWeight: 700, color: 'var(--accent-teal)' }}>Pay Rate:</span> <span style={{ fontWeight: 600 }}>$3.00</span> <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>/ video min</span>
+                                    <span style={{ fontWeight: 700, color: 'var(--accent-teal)' }}>Pay Rate:</span> <span style={{ fontWeight: 600 }}>$4.40</span> <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>/ video min</span>
                                 </div>
                                 <div style={{ marginBottom: '2rem' }}>
                                     <p style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.75rem', fontSize: '0.95rem' }}><CheckCircle2 size={18} style={{ color: 'var(--accent-teal)', flexShrink: 0, marginTop: '2px' }} /> Proofread and heavily edit draft transcripts.</p>
@@ -164,7 +164,7 @@ const Jobs: React.FC = () => {
                     <div className="card public-dark-cta-card shadow-xl" style={{ padding: '5rem 3rem', background: 'var(--primary-dark)', color: 'white' }}>
                         <h3 className="public-mobile-title-xl" style={{ fontSize: '2.5rem', marginBottom: '1.25rem', color: 'white' }}>Ready to send your application?</h3>
                         <p className="public-mobile-body-lg" style={{ color: 'var(--secondary-gray-dark)', fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '650px', margin: '0 auto 3rem', lineHeight: '1.8' }}>
-                            We do not use an automated gatekeeper form. Apply directly by pitching your resume, cover letter, and your relevant typing experience directly to our hiring team's inbox.
+                            We do not use an automated gatekeeper form. Apply directly by pitching your resume, cover letter, and your relevant Transcription experience directly to our hiring team's inbox.
                         </p>
 
                         <div style={{ background: 'rgba(255,255,255,0.05)', padding: '2rem', borderRadius: 'var(--radius-lg)', maxWidth: '500px', margin: '0 auto 2rem', border: '1px solid rgba(255,255,255,0.1)' }}>
@@ -172,8 +172,8 @@ const Jobs: React.FC = () => {
                             <ol style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '1rem', paddingLeft: '1rem', color: 'rgba(255,255,255,0.8)' }}>
                                 <li><strong>Apply</strong> &mdash; Send your cover letter and resume.</li>
                                 <li><strong>Interview</strong> &mdash; If selected, we will contact you.</li>
-                                <li><strong>Assess</strong> &mdash; Complete a simple non-paid assessment.</li>
-                                <li><strong>Work</strong> &mdash; Pass the test and start working immediately!</li>
+                                <li><strong>Assess</strong> &mdash; Complete a simple field professional Course and Exam.</li>
+                                <li><strong>Work</strong> &mdash; Pass Exam and start working immediately!</li>
                             </ol>
                         </div>
 
