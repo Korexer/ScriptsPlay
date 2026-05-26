@@ -39,11 +39,11 @@ const Footer: React.FC = () => {
                         <div className="footer-links" style={{ color: 'var(--secondary-gray-dark)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <Mail size={16} />
-                                <a href="mailto:hello@scriptsplay.com">hello@scriptsplay.com</a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@scriptsplay.com" target="_blank" rel="noopener noreferrer">hello@scriptsplay.com</a>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <Mail size={16} />
-                                <a href="mailto:jobs@scriptsplay.com">jobs@scriptsplay.com</a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jobs@scriptsplay.com" target="_blank" rel="noopener noreferrer">jobs@scriptsplay.com</a>
                             </div>
                         </div>
                     </div>

@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 style={{ marginBottom: '0.25rem' }}>General & Client Inquiries</h3>
-                                    <a href="mailto:hello@scriptsplay.com" style={{ color: 'var(--text-muted)' }}>hello@scriptsplay.com</a>
+                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@scriptsplay.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)' }}>hello@scriptsplay.com</a>
                                 </div>
                             </div>
 
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                                 <div>
                                     <h3 style={{ marginBottom: '0.25rem' }}>Worker Applications</h3>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Send your resume, cover letter, and experience to apply.</p>
-                                    <a href="mailto:jobs@scriptsplay.com" style={{ color: 'var(--primary-dark)', fontWeight: 600 }}>jobs@scriptsplay.com</a>
+                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jobs@scriptsplay.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-dark)', fontWeight: 600 }}>jobs@scriptsplay.com</a>
                                 </div>
                             </div>
 

@@ -126,7 +126,9 @@ export default function Support() {
               If you prefer to email us directly, you can reach out to our dedicated support team.
             </p>
             <a 
-              href="mailto:jobs@scriptsplay.com" 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jobs@scriptsplay.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="text-blue-700 font-semibold hover:text-blue-800 hover:underline"
             >
               jobs@scriptsplay.com

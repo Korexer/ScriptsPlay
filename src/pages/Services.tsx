@@ -152,7 +152,7 @@ const Services: React.FC = () => {
                             <p className="public-mobile-body-lg" style={{ color: 'var(--secondary-gray-dark)', fontSize: '1.125rem', marginBottom: '2.5rem' }}>
                                 Contact our enterprise sales team directly. We can arrange pilot testing to prove our speed and accuracy workflow on your real content.
                             </p>
-                            <a href="mailto:hello@scriptsplay.com" className="btn btn-primary public-mobile-body-lg" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem', width: '100%' }}>hello@scriptsplay.com</a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@scriptsplay.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary public-mobile-body-lg" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem', width: '100%' }}>hello@scriptsplay.com</a>
                         </div>
                     </div>
                 </div>

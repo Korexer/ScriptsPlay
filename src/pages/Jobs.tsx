@@ -178,7 +178,7 @@ const Jobs: React.FC = () => {
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-                            <a href="mailto:jobs@scriptsplay.com" className="btn btn-primary public-mobile-body-lg" style={{ padding: '1.25rem 4rem', fontSize: '1.25rem', fontWeight: 800 }}>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jobs@scriptsplay.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary public-mobile-body-lg" style={{ padding: '1.25rem 4rem', fontSize: '1.25rem', fontWeight: 800 }}>
                                 Email: jobs@scriptsplay.com
                             </a>
                         </div>
