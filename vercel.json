@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/blog/why-accurate-video-transcription-matters",
+      "destination": "/blog/how-to-plan-a-whiteboard-explainer-video",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-professional-captioning-improves-engagement",
+      "destination": "/blog/whiteboard-videos-for-training-and-onboarding",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

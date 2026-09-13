@@ -1,64 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Play, Mail } from 'lucide-react';
-
-const Footer: React.FC = () => {
-    return (
-        <footer className="footer">
-            <div className="container">
-                <div className="footer-top">
-                    <div>
-                        <Link to="/" className="logo" style={{ color: 'var(--white)', marginBottom: '1rem' }}>
-                            <Play size={24} style={{ color: 'var(--accent-orange)' }} />
-                            ScriptsPlay
-                        </Link>
-                        <p className="public-mobile-body-md" style={{ maxWidth: '300px' }}>
-                            Trusted by large content creators and production studios to deliver fast, accurate transcripts and captions at scale.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="footer-title">Company</h4>
-                        <div className="footer-links">
-                            <Link to="/about">About Us</Link>
-                            <Link to="/blog">Blog</Link>
-                            <Link to="/contact">Contact Us</Link>
-                        </div>
-                    </div>
-
-                    <div>
-                        {/* Removed Service Title as requested */}
-                        <div className="footer-links" style={{ marginTop: '2.7rem' }}>
-                            <Link to="/services">Service</Link>
-                            <Link to="/jobs">Job</Link>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 className="footer-title">Contact</h4>
-                        <div className="footer-links" style={{ color: 'var(--secondary-gray-dark)' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <Mail size={16} />
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@scriptsplay.com" target="_blank" rel="noopener noreferrer">hello@scriptsplay.com</a>
-                            </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <Mail size={16} />
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jobs@scriptsplay.com" target="_blank" rel="noopener noreferrer">jobs@scriptsplay.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} ScriptsPlay. All rights reserved.</p>
-                    <div style={{ display: 'flex', gap: '1.5rem' }}>
-                        <Link to="/privacy-policy">Privacy Policy</Link>
-                        <Link to="/terms-of-service">Terms of Service</Link>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
-};
-
-export default Footer;
+import { Link } from "react-router-dom";
+import { Play, ArrowUpRight } from "lucide-react";
+export default function Footer() {
+  return (
+    <footer className="sp-footer">
+      <div className="container">
+        <div className="sp-footer-grid">
+          <div>
+            <Link to="/" className="sp-logo">
+              <span>
+                <Play size={19} fill="currentColor" />
+              </span>
+              ScriptsPlay.
+            </Link>
+            <p>Whiteboard videos for ideas worth understanding.</p>
+            <a className="sp-footer-email" href="mailto:hello@scriptsplay.com">
+              hello@scriptsplay.com <ArrowUpRight size={17} />
+            </a>
+          </div>
+          <div>
+            <h2>Explore</h2>
+            <Link to="/services">Whiteboard video services</Link>
+            <Link to="/about">About ScriptsPlay</Link>
+            <Link to="/contact">Request a quote</Link>
+          </div>
+          <div>
+            <h2>Useful links</h2>
+            <Link to="/blog">The journal</Link>
+            <Link to="/jobs">Creative collaboration</Link>
+            <Link to="/privacy-policy">Privacy policy</Link>
+            <Link to="/terms-of-service">Terms of service</Link>
+          </div>
+        </div>
+        <div className="sp-footer-bottom">
+          <p>© {new Date().getFullYear()} ScriptsPlay. All rights reserved.</p>
+          <p>Big ideas. Simply explained.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

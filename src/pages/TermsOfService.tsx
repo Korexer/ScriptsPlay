@@ -1,68 +1,131 @@
-import React from 'react';
-import SEO from '../components/SEO';
-
-const TermsOfService: React.FC = () => {
-    return (
-        <>
-            <SEO
-                title="Terms of Service"
-                description="Terms of Service for using ScriptsPlay and participating in our transcription network."
-            />
-
-            <div className="page-header" style={{ padding: '6rem 0 3rem' }}>
-                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
-                    <h1>Terms of Service</h1>
-                    <p>Last updated: March 10, 2026</p>
-                </div>
-            </div>
-
-            <section className="section section-light">
-                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
-                    <div style={{ color: 'var(--text-main)' }}>
-                        <h2 className="mb-4 text-primary-dark">1. Acceptance of Terms</h2>
-                        <p className="mb-6">By accessing or using the ScriptsPlay website and services, whether as a client or an independent contractor, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">2. Description of Services</h2>
-                        <p className="mb-6">ScriptsPlay provides professional video and audio transcription, and captioning solutions. Turnaround times, pricing, and specific service deliverables are agreed upon in client contracts directly via email or our client portal. We reserve the right to modify or discontinue, temporarily or permanently, the Service with or without notice.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">3. User Conduct and Prohibited Activities</h2>
-                        <p className="mb-4">Users must not engage in any activity that disrupts or interferes with the website's functionality or our business operations. You agree not to:</p>
-                        <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '2rem' }}>
-                            <li style={{ marginBottom: '0.5rem' }}>Submit false, inaccurate, or misleading information through our application or contact forms.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Upload or transmit viruses, malware, or any other malicious code.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Attempt to gain unauthorized access to our internal dashboards, worker portals, or client media.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>For independent contractors: Download, distribute, or retain client media files or transcripts outside the scope of active assignments.</li>
-                        </ul>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">4. Independent Contractor Terms</h2>
-                        <p className="mb-4">Individuals who successfully join the ScriptsPlay network as transcriptionists, editors, or reviewers are classified strictly as independent contractors. You acknowledge and agree that:</p>
-                        <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '2rem' }}>
-                            <li style={{ marginBottom: '0.5rem' }}>You are not an employee of ScriptsPlay. You are responsible for your own taxes, equipment, software, and work schedule.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>You must maintain a minimum accuracy rate of 99% on assignments. Persistent failure to meet quality standards will result in account termination.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>You must adhere to strict confidentiality. All client media and transcripts are proprietary and confidential. Breach of confidentiality will result in immediate termination and potential legal action.</li>
-                        </ul>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">5. Intellectual Property Rights</h2>
-                        <p className="mb-6">Clients retain all ownership and intellectual property rights to the audio, video, and document files they submit to ScriptsPlay. Upon full payment for services, the client also holds all intellectual property rights to the finalized transcripts and captions. Independent contractors claim no ownership over the media they transcribe or the resulting transcripts.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">6. Limitation of Liability</h2>
-                        <p className="mb-6">ScriptsPlay acts to facilitate transcription and captioning. In no event shall ScriptsPlay, its directors, employees, or agents, be liable for indirect, incidental, special, or consequential damages resulting from the use of our services or website, including but not limited to loss of data, loss of revenue, or business interruption. We maintain strict accuracy targets, but specific liability limitations apply formally within individual client contracts.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">7. Termination</h2>
-                        <p className="mb-6">We may terminate or suspend your access to our Services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">8. Governing Law</h2>
-                        <p className="mb-6">These Terms shall be governed and construed in accordance with the laws, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">9. Contact Us</h2>
-                        <p className="mb-4">If you have any questions about these Terms, please contact us:</p>
-                        <p className="font-semibold text-primary-dark">ScriptsPlay</p>
-                        <p>Email: hello@scriptsplay.com</p>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
-};
-
-export default TermsOfService;
+import SEO from "../components/SEO";
+import { PageIntro } from "../components/public/PublicUI";
+export default function TermsOfService() {
+  return (
+    <>
+      <SEO
+        title="Terms of Service"
+        description="Terms for ScriptsPlay public website use and enquiries about whiteboard animation projects, quotes, revisions, and delivery."
+      />
+      <PageIntro eyebrow="Working together" title="Terms of service">
+        <p>
+          Public website and whiteboard video projects · Updated September 13,
+          2026
+        </p>
+      </PageIntro>
+      <div className="container sp-reading sp-article-body">
+        <section>
+          <h2>Scope of these terms</h2>
+          <p>
+            These terms describe use of scriptsplay.com and enquiries about
+            ScriptsPlay’s whiteboard animation service. A written project
+            agreement or accepted quote sets the terms of a paid project. These
+            public terms do not amend existing private worker or contractor
+            arrangements.
+          </p>
+        </section>
+        <section>
+          <h2>Quotes and project approval</h2>
+          <p>
+            Sending an enquiry does not place an order or authorise a charge.
+            Before production begins, we agree the scope, price and currency,
+            payment schedule, delivery plan, and review process in writing. Any
+            taxes, fees, or third-party costs should be identified in that
+            agreement. Website examples are illustrative unless expressly
+            identified as completed work.
+          </p>
+        </section>
+        <section>
+          <h2>What your project includes</h2>
+          <p>
+            The accepted scope defines script work, scene planning, animation,
+            voiceover, music, on-screen text, video length, output formats, and
+            revision rounds. Extra versions, new scenes, or changes to an
+            approved script may change the cost and schedule. Editable files are
+            included only where agreed.
+          </p>
+        </section>
+        <section>
+          <h2>Your materials and approvals</h2>
+          <p>
+            You are responsible for having permission to use materials you
+            provide, including logos, images, scripts, music, and personal
+            information. Please provide accurate product details and have an
+            authorised person review the script, visual direction, claims, and
+            draft video. We may decline content that infringes rights, is
+            unlawful, or misrepresents a person or business.
+          </p>
+          <p>
+            If your video concerns a regulated or specialist subject, arrange
+            review by a qualified person. Animation is a communication format
+            and does not itself provide professional certification or advice.
+          </p>
+        </section>
+        <section>
+          <h2>Timelines and changes</h2>
+          <p>
+            Delivery dates are agreed after reviewing the brief. They depend on
+            receiving materials, approvals, and payments as scheduled. If
+            feedback is delayed or the scope changes, we will discuss an updated
+            schedule. A requested deadline is not confirmed until accepted in
+            writing.
+          </p>
+        </section>
+        <section>
+          <h2>Usage rights and third-party assets</h2>
+          <p>
+            You retain your rights in materials you provide. The project
+            agreement specifies the rights to the final video and when those
+            rights take effect, including any payment conditions. Fonts, music,
+            stock assets, voices, and production tools may carry separate
+            licence restrictions. We agree relevant licensing and use
+            requirements as part of the project.
+          </p>
+          <p>
+            We will ask before displaying your commissioned video or identifying
+            you as a client in our public portfolio. A private sample is a
+            concept for discussion and should not be presented as an approved
+            client project.
+          </p>
+        </section>
+        <section>
+          <h2>AI-assisted production</h2>
+          <p>
+            AI tools may assist with drafts, narration, or animation. Tell us
+            about restrictions on AI use, confidential information, voice
+            choices, and brand assets before supplying them. Agreed requirements
+            form part of the scope. Human review and client approval remain part
+            of the project process.
+          </p>
+        </section>
+        <section>
+          <h2>Cancellation and project concerns</h2>
+          <p>
+            Payment, cancellation, and refund arrangements are set out in your
+            written agreement. Contact us promptly if you want to pause, change,
+            or cancel work so we can confirm the work completed and the options
+            available. Nothing in these public terms removes rights that cannot
+            lawfully be excluded.
+          </p>
+        </section>
+        <section>
+          <h2>Results and website use</h2>
+          <p>
+            A video’s commercial results depend on its audience, message,
+            distribution, offer, and other factors. We do not guarantee sales,
+            conversion rates, views, or learner outcomes. Use this website
+            lawfully and do not misuse its forms, interfere with its operation,
+            or submit material you are not entitled to share.
+          </p>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <p>
+            Questions about a quote, a project, or these terms? Email{" "}
+            <a href="mailto:hello@scriptsplay.com">hello@scriptsplay.com</a>.
+          </p>
+        </section>
+      </div>
+    </>
+  );
+}

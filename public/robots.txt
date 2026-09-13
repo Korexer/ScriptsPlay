@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /spworkersportal101
+
+Sitemap: https://www.scriptsplay.com/sitemap.xml

@@ -1,78 +1,130 @@
-import React from 'react';
-import SEO from '../components/SEO';
-
-const PrivacyPolicy: React.FC = () => {
-    return (
-        <>
-            <SEO
-                title="Privacy Policy"
-                description="Privacy Policy detailing how ScriptsPlay collects and protects user data."
-            />
-
-            <div className="page-header" style={{ padding: '6rem 0 3rem' }}>
-                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
-                    <h1>Privacy Policy</h1>
-                    <p>Last updated: March 10, 2026</p>
-                </div>
-            </div>
-
-            <section className="section section-light">
-                <div className="container public-legal-shell" style={{ maxWidth: '800px' }}>
-                    <div style={{ color: 'var(--text-main)' }}>
-                        <h2 className="mb-4 text-primary-dark">1. Introduction</h2>
-                        <p className="mb-6">Welcome to ScriptsPlay ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website scriptsplay.com, use our services, or apply to join our network of independent transcription professionals.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">2. Information We Collect</h2>
-                        <p className="mb-4">We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
-                        <h3 className="text-lg font-semibold mt-4 mb-2">Personal Data</h3>
-                        <p className="mb-4">Personally identifiable information, such as your name, email address, telephone number, and demographic information that you voluntarily give to us when you register with the Site, request services, or apply for a position. For our independent contractors, this also includes resume data, assessment results, and payment routing information.</p>
-                        <h3 className="text-lg font-semibold mt-4 mb-2">Client Audio & Media Files</h3>
-                        <p className="mb-6">When clients submit audio, video, or document files for transcription, we collect and store these files securely. We treat all client media as highly confidential and subject to strict access controls.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">3. How We Use Your Information</h2>
-                        <p className="mb-4">Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
-                        <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '2rem' }}>
-                            <li style={{ marginBottom: '0.5rem' }}>Create and manage your account.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Process transactions, deliver transcription services, and send related information, including confirmations and invoices.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Evaluate and onboard prospective independent transcriptionists.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Manage contractor payouts and performance metrics.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Respond to customer service requests and support needs.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Monitor and analyze usage and trends to improve your experience with the Site.</li>
-                        </ul>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">4. Disclosure of Your Information</h2>
-                        <p className="mb-4">We may share information we have collected about you in certain situations. Your information may be disclosed as follows:</p>
-                        <h3 className="text-lg font-semibold mt-4 mb-2">Third-Party Service Providers</h3>
-                        <p className="mb-4">We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, and customer service. Specifically, our independent contractors use our proprietary portal to access client media under strict Non-Disclosure Agreements (NDAs).</p>
-                        <h3 className="text-lg font-semibold mt-4 mb-2">By Law or to Protect Rights</h3>
-                        <p className="mb-6">If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">5. Data Security</h2>
-                        <p className="mb-6">We use administrative, technical, and physical security measures to help protect your personal information and client media. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">6. Confidentiality of Client Materials</h2>
-                        <p className="mb-6">ScriptsPlay implements rigorous confidentiality protocols. All independent contractors are required to sign strict NDAs before accessing any client media. Client files are processed within secure environments, and contractors are prohibited from downloading or storing client media on personal devices beyond the scope of active work assignments.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">7. Your Privacy Rights</h2>
-                        <p className="mb-4">Depending on your location (e.g., under GDPR or CCPA), you may have the right to:</p>
-                        <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '2rem' }}>
-                            <li style={{ marginBottom: '0.5rem' }}>Request access to your personal data.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Request correction of incomplete or inaccurate data.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Request erasure of your personal data.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Object to processing of your personal data.</li>
-                            <li style={{ marginBottom: '0.5rem' }}>Request the transfer of your personal data.</li>
-                        </ul>
-                        <p className="mb-6">If you wish to exercise any of these rights, please contact us using the details below.</p>
-
-                        <h2 className="mb-4 text-primary-dark mt-8">8. Contact Us</h2>
-                        <p className="mb-4">If you have questions or comments about this Privacy Policy, please contact us at:</p>
-                        <p className="font-semibold text-primary-dark">ScriptsPlay</p>
-                        <p>Email: hello@scriptsplay.com</p>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
-};
-
-export default PrivacyPolicy;
+import SEO from "../components/SEO";
+import { PageIntro } from "../components/public/PublicUI";
+export default function PrivacyPolicy() {
+  return (
+    <>
+      <SEO
+        title="Privacy Policy"
+        description="How ScriptsPlay handles enquiries, project briefs, and information used to provide whiteboard animation services."
+      />
+      <PageIntro eyebrow="Your information" title="Privacy policy">
+        <p>
+          Public website and whiteboard video enquiries · Updated September 13,
+          2026
+        </p>
+      </PageIntro>
+      <div className="container sp-reading sp-article-body">
+        <section>
+          <h2>Who we are</h2>
+          <p>
+            ScriptsPlay provides whiteboard animation and explainer video
+            services through scriptsplay.com. For questions about your
+            information, contact{" "}
+            <a href="mailto:hello@scriptsplay.com">hello@scriptsplay.com</a>.
+            This notice describes public website enquiries and video projects.
+            It does not replace separately agreed terms for private accounts or
+            contractor relationships.
+          </p>
+        </section>
+        <section>
+          <h2>Information you choose to share</h2>
+          <p>
+            Our quote form asks for your name, email, project type, and project
+            brief. You may also share a company or website, preferred video
+            length, deadline, and budget. If you contact us by email or discuss
+            a project, the conversation may include scripts, brand assets,
+            feedback, and delivery information. Creative collaboration enquiries
+            may include portfolio links and availability.
+          </p>
+          <p>
+            Please share only information you are entitled to provide. Avoid
+            including confidential customer records, sensitive personal
+            information, or account passwords in a public enquiry.
+          </p>
+        </section>
+        <section>
+          <h2>Why we use this information</h2>
+          <p>
+            We use enquiry details to answer your request, prepare a quote,
+            discuss a possible project, and maintain a record of the
+            conversation. For agreed work, we use project materials to produce,
+            review, and deliver the video. We also use relevant records to
+            handle support, protect our services, and meet applicable
+            record-keeping duties.
+          </p>
+          <p>
+            Where applicable data-protection law requires a legal basis, these
+            purposes may involve taking steps at your request before a contract,
+            performing an agreed contract, complying with legal duties, or our
+            legitimate interests in responding to business enquiries and
+            operating the service. Where consent is required for a separate use,
+            we will request it.
+          </p>
+        </section>
+        <section>
+          <h2>Service providers and project tools</h2>
+          <p>
+            The site uses Vercel for hosting and Supabase for the existing
+            enquiry database. A contact submission can also trigger an email
+            notification. These providers and the email services involved
+            process the information needed to deliver those functions. The site
+            loads fonts from Google Fonts, which involves a connection from your
+            browser.
+          </p>
+          <p>
+            Video production can involve third-party and AI-assisted tools.
+            Discuss confidentiality restrictions and any required processing
+            agreement with us before sharing project materials. We will agree
+            relevant project requirements before work begins. Provider
+            processing can take place in countries other than your own; contact
+            us to discuss applicable arrangements for your project.
+          </p>
+        </section>
+        <section>
+          <h2>Storage and retention</h2>
+          <p>
+            We retain enquiry and project records for the purposes described
+            above, including the project relationship, follow-up, dispute
+            handling, and applicable record-keeping obligations. The appropriate
+            period depends on the record and purpose. You can ask us about
+            retention or request deletion at hello@scriptsplay.com. Some records
+            may need to be retained for legal or contractual reasons.
+          </p>
+        </section>
+        <section>
+          <h2>Browser storage and external links</h2>
+          <p>
+            The public website does not require a customer account to request a
+            quote. Existing account features may use browser storage to maintain
+            a session. Links to email services or other websites are subject to
+            those services’ own privacy practices.
+          </p>
+        </section>
+        <section>
+          <h2>Your choices and requests</h2>
+          <p>
+            You may ask to access, correct, or delete information you supplied.
+            Depending on the law that applies to you, you may also have rights
+            to object, restrict processing, receive a portable copy, withdraw
+            consent, or complain to a data-protection authority. We may need to
+            verify your identity and consider applicable exceptions before
+            responding.
+          </p>
+          <p>
+            To make a request, email{" "}
+            <a href="mailto:hello@scriptsplay.com">hello@scriptsplay.com</a>{" "}
+            with enough context to identify the relevant enquiry or project. You
+            can also ask us to stop business follow-up messages.
+          </p>
+        </section>
+        <section>
+          <h2>Updates</h2>
+          <p>
+            We may update this notice when the public site or service changes.
+            The date above identifies this version.
+          </p>
+        </section>
+      </div>
+    </>
+  );
+}
