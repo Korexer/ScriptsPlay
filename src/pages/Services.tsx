@@ -6,7 +6,6 @@ import {
   CTA,
   Checklist,
   Process,
-  UseCases,
 } from "../components/public/PublicUI";
 const faqs = [
   [
@@ -52,17 +51,13 @@ export default function Services() {
       <PageIntro
         eyebrow="The service"
         title="A clear message. A video to match."
+        tone="blue"
       >
         <p>
           Whiteboard animation for businesses with something useful to explain.
           Start with a single video or plan a series around your audience.
         </p>
       </PageIntro>
-      <section className="sp-section">
-        <div className="container">
-          <UseCases />
-        </div>
-      </section>
       <section className="sp-section sp-soft">
         <div className="container sp-split">
           <div>

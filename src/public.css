@@ -556,6 +556,32 @@
 .public-site .sp-intro .sp-lead p {
   margin: 0;
 }
+.public-site .sp-intro-dark {
+  background: var(--primary-dark);
+  color: var(--secondary-gray-dark);
+  border-color: var(--text-main);
+}
+.public-site .sp-intro-blue {
+  background: var(--primary-blue);
+  color: var(--secondary-gray-dark);
+  border-color: var(--primary-blue);
+}
+.public-site .sp-intro-dark h1,
+.public-site .sp-intro-blue h1 {
+  color: var(--white);
+}
+.public-site .sp-intro-dark .sp-eyebrow,
+.public-site .sp-intro-blue .sp-eyebrow {
+  color: var(--accent-teal);
+}
+.public-site .sp-intro-teal {
+  background: var(--accent-teal);
+  color: var(--primary-dark);
+  border-color: var(--accent-teal);
+}
+.public-site .sp-intro-teal .sp-eyebrow {
+  color: var(--primary-dark);
+}
 .public-site .sp-checklist {
   padding: 0;
   margin: 20px 0;
@@ -646,6 +672,25 @@
   color: var(--primary-blue);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+.public-site .sp-legal {
+  max-width: 900px;
+}
+.public-site .sp-legal > section {
+  padding: 30px 34px;
+  margin: 16px 0;
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+}
+.public-site .sp-legal > section:nth-child(odd) {
+  background: var(--secondary-gray);
+  border-left-color: var(--accent-teal);
+}
+.public-site .sp-legal > section h2 {
+  margin-bottom: 16px;
+}
+.public-site .sp-legal > section p:last-child {
+  margin-bottom: 0;
 }
 .public-site .sp-contents {
   background: var(--secondary-gray);
@@ -871,6 +916,9 @@
   }
   .public-site .sp-article-body {
     padding-block: 20px 45px;
+  }
+  .public-site .sp-legal > section {
+    padding: 24px 20px;
   }
   .public-site .sp-form-grid {
     grid-template-columns: 1fr;

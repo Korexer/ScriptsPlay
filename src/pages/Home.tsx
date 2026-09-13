@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, PencilLine, CheckCircle2 } from "lucide-react";
 import SEO from "../components/SEO";
 import Storyboard from "../components/public/Storyboard";
-import { CTA, Process, UseCases } from "../components/public/PublicUI";
+import { CTA, UseCases } from "../components/public/PublicUI";
 import { articles } from "../content/articles";
 
 export default function Home() {
@@ -106,15 +106,6 @@ export default function Home() {
         </div>
       </section>
       <section className="sp-section">
-        <div className="container">
-          <div className="sp-section-heading">
-            <p className="sp-eyebrow">How we work</p>
-            <h2>A simple process, with you in the loop.</h2>
-          </div>
-          <Process />
-        </div>
-      </section>
-      <section className="sp-section sp-soft">
         <div className="container">
           <div className="sp-heading-row">
             <div>

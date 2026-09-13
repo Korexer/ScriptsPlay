@@ -76,13 +76,14 @@ export default function Contact() {
       <PageIntro
         eyebrow="Let’s talk about your video"
         title="Bring the idea. We’ll help shape the story."
+        tone="dark"
       >
         <p>
           Tell us what you want to explain, who it is for, and where you will
           use it. We’ll get back to you to discuss the scope and quote.
         </p>
       </PageIntro>
-      <section className="sp-section">
+      <section className="sp-section sp-soft">
         <div className="container sp-contact-grid">
           <aside>
             <p className="sp-eyebrow">A good brief can be short</p>

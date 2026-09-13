@@ -6,13 +6,15 @@ export function PageIntro({
   eyebrow,
   title,
   children,
+  tone = "light",
 }: {
   eyebrow: string;
   title: string;
   children: ReactNode;
+  tone?: "light" | "dark" | "blue" | "teal";
 }) {
   return (
-    <section className="sp-intro">
+    <section className={`sp-intro sp-intro-${tone}`}>
       <div className="container">
         <p className="sp-eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
@@ -61,7 +63,7 @@ export function Checklist({ items }: { items: string[] }) {
 const steps = [
   [
     "01",
-    "Bring the idea",
+    "Share the brief",
     "Tell us who the video is for, what they need to understand, and what they should do next.",
   ],
   [

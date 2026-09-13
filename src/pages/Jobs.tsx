@@ -10,13 +10,14 @@ export default function Jobs() {
       <PageIntro
         eyebrow="Creative collaboration"
         title="Help make complex ideas clear."
+        tone="teal"
       >
         <p>
           Scriptwriters, illustrators, animators, and voice talent: tell us
           about the work you do best.
         </p>
       </PageIntro>
-      <section className="sp-section">
+      <section className="sp-section sp-soft">
         <div className="container sp-split">
           <div>
             <h2>Start with your work.</h2>

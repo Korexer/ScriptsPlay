@@ -13,7 +13,7 @@ export default function TermsOfService() {
           2026
         </p>
       </PageIntro>
-      <div className="container sp-reading sp-article-body">
+      <div className="container sp-reading sp-article-body sp-legal">
         <section>
           <h2>Scope of these terms</h2>
           <p>
