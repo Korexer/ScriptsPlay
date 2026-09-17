@@ -39,7 +39,11 @@ export default function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="robots"
-        content={noindex ? "noindex,follow" : "index,follow"}
+        content={
+          noindex
+            ? "noindex,follow"
+            : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+        }
       />
     </Helmet>
   );
