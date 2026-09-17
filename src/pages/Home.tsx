@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, PencilLine, CheckCircle2 } from "lucide-react";
 import SEO from "../components/SEO";
 import Storyboard from "../components/public/Storyboard";
+import VideoSamples from "../components/public/VideoSamples";
 import { CTA, UseCases } from "../components/public/PublicUI";
 import { articles } from "../content/articles";
 
@@ -69,6 +70,19 @@ export default function Home() {
             </p>
           </div>
           <UseCases />
+        </div>
+      </section>
+      <section className="sp-section sp-samples-section" id="samples">
+        <div className="container">
+          <div className="sp-section-heading">
+            <p className="sp-eyebrow">See the work in motion</p>
+            <h2>Watch real whiteboard animation samples.</h2>
+            <p>
+              Press play to see how voice, drawings, and pacing work together to
+              hold attention and make each message easier to understand.
+            </p>
+          </div>
+          <VideoSamples />
         </div>
       </section>
       <section className="sp-section sp-soft">
