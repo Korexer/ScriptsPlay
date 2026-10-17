@@ -20,7 +20,7 @@ export default function Article({ index }: { index: number }) {
             <p className="sp-lead">{article.description}</p>
             <p className="sp-byline">
               By Korex at ScriptsPlay ·{" "}
-              <time dateTime="2026-09-13">September 13, 2026</time>
+              <time dateTime="2026-10-18">October 18, 2026</time>
             </p>
           </div>
         </header>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,29 +15,29 @@ import "./public.css";
 
 // Pages
 import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
-import Services from "./pages/Services";
-import Jobs from "./pages/Jobs";
-import Blog from "./pages/Blog";
-import BlogPost1 from "./pages/BlogPost1";
-import BlogPost2 from "./pages/BlogPost2";
-import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
-
-// Portal Components
-import Login from "./pages/portal/Login";
-import Signup from "./pages/portal/Signup";
-import Dashboard from "./pages/portal/Dashboard";
-import ProfileSetup from "./pages/portal/ProfileSetup";
-import TaskBoard from "./pages/portal/TaskBoard";
-import TaskDetail from "./pages/portal/TaskDetail";
-import Earnings from "./pages/portal/Earnings";
-import Support from "./pages/portal/Support";
-import UnlockAccess from "./pages/portal/UnlockAccess";
-import { PortalLayout } from "./components/portal/PortalLayout";
-import { ProtectedRoute } from "./components/portal/ProtectedRoute";
-import { AccessGrantedRoute } from "./components/portal/AccessGrantedRoute";
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost1 = lazy(() => import("./pages/BlogPost1"));
+const BlogPost2 = lazy(() => import("./pages/BlogPost2"));
+const Contact = lazy(() => import("./pages/Contact"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const Discover = lazy(() => import("./pages/Discover"));
+const ReadyMade = lazy(() => import("./pages/ReadyMade"));
+const Casting = lazy(() => import("./pages/Casting"));
+const HowItWorks = lazy(() => import("./pages/HowItWorks"));
+const BecomeCreator = lazy(() => import("./pages/BecomeCreator"));
+const Fees = lazy(() => import("./pages/Fees"));
+const AuthPage = lazy(() => import("./pages/AuthPage"));
+const OfferDetail = lazy(() => import("./pages/OfferDetail"));
+const CreatorProfile = lazy(() => import("./pages/CreatorProfile"));
+const CastingDetail = lazy(() => import("./pages/CastingDetail"));
+const AccountLayout = lazy(() => import("./pages/account/AccountLayout"));
+const ProfileEditor = lazy(() => import("./pages/account/ProfileEditor"));
+const OffersList = lazy(() => import("./pages/account/OffersList"));
+const OfferEditor = lazy(() => import("./pages/account/OfferEditor"));
+const CastingList = lazy(() => import("./pages/account/CastingList"));
+const CastingEditor = lazy(() => import("./pages/account/CastingEditor"));
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -57,7 +57,7 @@ const App: React.FC = () => {
       <div
         style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
-        <Routes>
+        <Suspense fallback={<div className="route-loading" role="status">Loading page…</div>}><Routes>
           {/* Public Website Routes */}
           <Route
             element={
@@ -75,16 +75,37 @@ const App: React.FC = () => {
             }
           >
             <Route path="/" element={<Home />} />
+            <Route path="/discover" element={<Discover />} />
+            <Route path="/content" element={<ReadyMade />} />
+            <Route path="/casting" element={<Casting />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/become-a-creator" element={<BecomeCreator />} />
+            <Route path="/fees" element={<Fees />} />
+            <Route path="/join" element={<AuthPage mode="join" />} />
+            <Route path="/sign-in" element={<AuthPage mode="sign-in" />} />
+            <Route path="/offer/:slug" element={<OfferDetail />} />
+            <Route path="/creator/:handle" element={<CreatorProfile />} />
+            <Route path="/casting/:id" element={<CastingDetail />} />
+            <Route path="/account" element={<AccountLayout />}>
+              <Route index element={<Navigate replace to="profile" />} />
+              <Route path="profile" element={<ProfileEditor />} />
+              <Route path="offers" element={<OffersList />} />
+              <Route path="offers/new" element={<OfferEditor />} />
+              <Route path="offers/:id/edit" element={<OfferEditor />} />
+              <Route path="casting" element={<CastingList />} />
+              <Route path="casting/new" element={<CastingEditor />} />
+              <Route path="casting/:id/edit" element={<CastingEditor />} />
+            </Route>
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/services" element={<Navigate replace to="/discover" />} />
+            <Route path="/jobs" element={<Navigate replace to="/become-a-creator" />} />
             <Route path="/blog" element={<Blog />} />
             <Route
-              path="/blog/how-to-plan-a-whiteboard-explainer-video"
+              path="/blog/how-to-brief-a-video-creator"
               element={<BlogPost1 />}
             />
             <Route
-              path="/blog/whiteboard-videos-for-training-and-onboarding"
+              path="/blog/turn-creative-skill-into-an-offer"
               element={<BlogPost2 />}
             />
             <Route
@@ -92,7 +113,7 @@ const App: React.FC = () => {
               element={
                 <Navigate
                   replace
-                  to="/blog/how-to-plan-a-whiteboard-explainer-video"
+                  to="/blog/how-to-brief-a-video-creator"
                 />
               }
             />
@@ -101,10 +122,12 @@ const App: React.FC = () => {
               element={
                 <Navigate
                   replace
-                  to="/blog/whiteboard-videos-for-training-and-onboarding"
+                  to="/blog/turn-creative-skill-into-an-offer"
                 />
               }
             />
+            <Route path="/blog/how-to-plan-a-whiteboard-explainer-video" element={<Navigate replace to="/blog/how-to-brief-a-video-creator" />} />
+            <Route path="/blog/whiteboard-videos-for-training-and-onboarding" element={<Navigate replace to="/blog/turn-creative-skill-into-an-offer" />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
@@ -114,7 +137,7 @@ const App: React.FC = () => {
                 <>
                   <SEO
                     title="Page not found"
-                    description="Find ScriptsPlay whiteboard video services or request a quote."
+                    description="Explore creators, ready-made content and casting calls on ScriptsPlay."
                     noindex
                   />
                   <section className="sp-intro">
@@ -122,11 +145,10 @@ const App: React.FC = () => {
                       <p className="sp-eyebrow">404 / Page not found</p>
                       <h1>Let’s get you back to the story.</h1>
                       <p>
-                        This page is not available. Explore our whiteboard video
-                        services or start a conversation.
+                        This page is not available. Find creative talent or start a conversation.
                       </p>
-                      <Link className="btn btn-primary" to="/services">
-                        Explore our services
+                      <Link className="btn btn-primary" to="/discover">
+                        Explore creators
                       </Link>
                     </div>
                   </section>
@@ -135,30 +157,7 @@ const App: React.FC = () => {
             />
           </Route>
 
-          {/* Unauthenticated Portal Routes */}
-          <Route path="/spworkersportal101" element={<Login />} />
-          <Route path="/spworkersportal101/login" element={<Login />} />
-          <Route path="/spworkersportal101/signup" element={<Signup />} />
-
-          {/* Protected Portal Routes */}
-          <Route element={
-            <ProtectedRoute>
-              <PortalLayout>
-                <Outlet />
-              </PortalLayout>
-            </ProtectedRoute>
-          }>
-            <Route path="/spworkersportal101/dashboard" element={<Dashboard />} />
-            <Route path="/spworkersportal101/profile" element={<ProfileSetup />} />
-            <Route path="/spworkersportal101/support" element={<Support />} />
-            <Route path="/spworkersportal101/unlock-access" element={<UnlockAccess />} />
-            
-            {/* Strict Access Required Routes */}
-            <Route path="/spworkersportal101/tasks" element={<AccessGrantedRoute><TaskBoard /></AccessGrantedRoute>} />
-            <Route path="/spworkersportal101/task/:id" element={<AccessGrantedRoute><TaskDetail /></AccessGrantedRoute>} />
-            <Route path="/spworkersportal101/earnings" element={<AccessGrantedRoute><Earnings /></AccessGrantedRoute>} />
-          </Route>
-        </Routes>
+        </Routes></Suspense>
       </div>
     </Router>
   );

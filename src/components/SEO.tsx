@@ -34,7 +34,7 @@ export default function SEO({
       <meta property="og:site_name" content="ScriptsPlay" />
       <meta
         property="og:image"
-        content="https://www.scriptsplay.com/images/social-whiteboard.png"
+        content="https://www.scriptsplay.com/images/social-marketplace.png"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
