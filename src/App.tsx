@@ -30,6 +30,7 @@ const BecomeCreator = lazy(() => import("./pages/BecomeCreator"));
 const Fees = lazy(() => import("./pages/Fees"));
 const AuthPage = lazy(() => import("./pages/AuthPage"));
 const VerifyEmail = lazy(() => import("./pages/VerifyEmail"));
+const PasswordReset = lazy(() => import("./pages/PasswordReset"));
 const OfferDetail = lazy(() => import("./pages/OfferDetail"));
 const CreatorProfile = lazy(() => import("./pages/CreatorProfile"));
 const CastingDetail = lazy(() => import("./pages/CastingDetail"));
@@ -92,6 +93,8 @@ const App: React.FC = () => {
             <Route path="/join" element={<AuthPage mode="join" />} />
             <Route path="/sign-in" element={<AuthPage mode="sign-in" />} />
             <Route path="/verify-email" element={<VerifyEmail />} />
+            <Route path="/forgot-password" element={<PasswordReset mode="request" />} />
+            <Route path="/reset-password" element={<PasswordReset mode="update" />} />
             <Route path="/offer/:slug" element={<OfferDetail />} />
             <Route path="/creator/:handle" element={<CreatorProfile />} />
             <Route path="/casting/:id" element={<CastingDetail />} />

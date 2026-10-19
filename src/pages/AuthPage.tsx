@@ -15,31 +15,7 @@ export default function AuthPage({ mode }: { mode: "sign-in" | "join" }) {
   const isJoin = mode === "join";
   const requestedNext = params.get("next") || "/account/profile";
   const next = requestedNext.startsWith("/") && !requestedNext.startsWith("//") ? requestedNext : "/account/profile";
-  const verificationPath = "/verify-email?mode=signup&next=" + encodeURIComponent(next);
-
-  async function sendSignInCode() {
-    const address = email.trim();
-    if (busy) return;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(address)) {
-      setError("Enter your email address to get a sign-in code.");
-      return;
-    }
-    setBusy(true);
-    setError("");
-    try {
-      const { error: authError } = await supabase.auth.signInWithOtp({
-        email: address,
-        options: { shouldCreateUser: false },
-      });
-      if (authError) throw authError;
-      sessionStorage.setItem("scriptsplay_verification_email", address);
-      navigate("/verify-email?mode=signin&next=" + encodeURIComponent(next));
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "We could not send a code. Please try again.");
-    } finally {
-      setBusy(false);
-    }
-  }
+  const verificationPath = "/verify-email?next=" + encodeURIComponent(next);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -92,8 +68,7 @@ export default function AuthPage({ mode }: { mode: "sign-in" | "join" }) {
               <div className="form-group"><label className="form-label" htmlFor="auth-password"><LockKeyhole size={16} /> Password *</label><input className="form-control" id="auth-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} minLength={8} autoComplete={isJoin ? "new-password" : "current-password"} required /></div>
               <button className="btn btn-primary" type="submit" disabled={busy}>{busy ? "Please wait…" : isJoin ? "Create account" : "Sign in"} <ArrowRight size={18} /></button>
             </form>
-            {!isJoin && <button className="sp-text-link market-auth-code-link" type="button" onClick={sendSignInCode} disabled={busy}>Email me a sign-in code</button>}
-            {!isJoin && <p className="market-auth-switch"><button className="sp-text-link" type="button" onClick={() => { sessionStorage.setItem("scriptsplay_verification_email", email.trim()); navigate(verificationPath); }}>Need to confirm your email?</button></p>}
+            {!isJoin && <p className="market-auth-switch"><Link to="/forgot-password">Forgot password?</Link></p>}
             <p className="market-auth-switch">{isJoin ? "Already have an account?" : "New to ScriptsPlay?"} <Link to={(isJoin ? "/sign-in" : "/join") + "?next=" + encodeURIComponent(next)}>{isJoin ? "Sign in" : "Create an account"}</Link></p>
             <p className="sp-small">By creating an account, you agree to our <Link to="/terms-of-service">terms</Link> and <Link to="/privacy-policy">privacy policy</Link>.</p>
           </div>

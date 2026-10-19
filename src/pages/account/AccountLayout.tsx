@@ -22,7 +22,7 @@ export default function AccountLayout() {
 
   if (loading) return <div className="container market-account-loading" role="status">Loading your account…</div>;
   if (!user) return <Navigate to={`/sign-in?next=${encodeURIComponent(location.pathname + location.search)}`} replace />;
-  if (!user.email_confirmed_at) return <Navigate to={`/verify-email?mode=signup&next=${encodeURIComponent(location.pathname + location.search)}`} replace />;
+  if (!user.email_confirmed_at) return <Navigate to={`/verify-email?next=${encodeURIComponent(location.pathname + location.search)}`} replace />;
 
   async function signOut() {
     await supabase.auth.signOut();

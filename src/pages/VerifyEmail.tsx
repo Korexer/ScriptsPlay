@@ -8,7 +8,6 @@ import { supabase } from "../lib/supabase";
 export default function VerifyEmail() {
   const navigate = useNavigate();
   const [params] = useSearchParams();
-  const mode = params.get("mode") === "signin" ? "signin" : "signup";
   const requestedNext = params.get("next") || "/account/profile";
   const next = requestedNext.startsWith("/") && !requestedNext.startsWith("//") ? requestedNext : "/account/profile";
   const [email, setEmail] = useState(() => sessionStorage.getItem("scriptsplay_verification_email") || "");
@@ -32,12 +31,12 @@ export default function VerifyEmail() {
       const { data, error: authError } = await supabase.auth.verifyOtp({
         email: address,
         token: code,
-        type: mode === "signin" ? "email" : "signup",
+        type: "signup",
       });
       if (authError) throw authError;
       sessionStorage.removeItem("scriptsplay_verification_email");
       if (data.session) {
-        navigate(mode === "signup" ? "/account/profile?next=" + encodeURIComponent(next) : next, { replace: true });
+        navigate("/account/profile?next=" + encodeURIComponent(next), { replace: true });
       } else {
         setNotice("Your email is confirmed. Please sign in to continue.");
       }
@@ -59,9 +58,7 @@ export default function VerifyEmail() {
     setError("");
     setNotice("");
     try {
-      const { error: authError } = mode === "signup"
-        ? await supabase.auth.resend({ type: "signup", email: address })
-        : await supabase.auth.signInWithOtp({ email: address, options: { shouldCreateUser: false } });
+      const { error: authError } = await supabase.auth.resend({ type: "signup", email: address });
       if (authError) throw authError;
       sessionStorage.setItem("scriptsplay_verification_email", address);
       setCode("");
@@ -80,7 +77,7 @@ export default function VerifyEmail() {
         <div className="market-auth-story">
           <p className="sp-eyebrow">One more step</p>
           <h1>Check your inbox.</h1>
-          <p>{mode === "signup" ? "Confirm your email before entering your new ScriptsPlay account." : "Use the code we sent to sign in to ScriptsPlay."}</p>
+          <p>Confirm your email before entering your new ScriptsPlay account.</p>
         </div>
         <div className="sp-form-card market-auth-card">
           <h2>Enter your six-digit code</h2>
