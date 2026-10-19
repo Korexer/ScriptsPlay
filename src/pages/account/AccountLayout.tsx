@@ -21,7 +21,7 @@ export default function AccountLayout() {
   }, []);
 
   if (loading) return <div className="container market-account-loading" role="status">Loading your account…</div>;
-  if (!user) return <Navigate to={`/sign-in?next=${encodeURIComponent(location.pathname)}`} replace />;
+  if (!user) return <Navigate to={`/sign-in?next=${encodeURIComponent(location.pathname + location.search)}`} replace />;
 
   async function signOut() {
     await supabase.auth.signOut();
@@ -37,6 +37,7 @@ export default function AccountLayout() {
           <NavLink to="/account/offers">My offers</NavLink>
           <NavLink to="/account/casting">My casting calls</NavLink>
           <NavLink to="/account/applications">My applications</NavLink>
+          <NavLink to="/account/messages">Messages</NavLink>
           {user.app_metadata?.scriptsplay_admin === true && <NavLink to="/account/review">Review queue</NavLink>}
           <Link to="/discover">Explore talent</Link>
         </nav>

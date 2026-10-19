@@ -16,6 +16,7 @@ export default function AuthPage({ mode }: { mode: "sign-in" | "join" }) {
   const isJoin = mode === "join";
   const requestedNext = params.get("next") || "/account/profile";
   const next = requestedNext.startsWith("/") && !requestedNext.startsWith("//") ? requestedNext : "/account/profile";
+  const profileAfterJoin = "/account/profile?next=" + encodeURIComponent(next);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -28,10 +29,10 @@ export default function AuthPage({ mode }: { mode: "sign-in" | "join" }) {
         const { data, error: authError } = await supabase.auth.signUp({
           email: email.trim(),
           password,
-          options: { emailRedirectTo: `${window.location.origin}/account/profile` },
+          options: { emailRedirectTo: window.location.origin + profileAfterJoin },
         });
         if (authError) throw authError;
-        if (data.session) navigate("/account/profile", { replace: true });
+        if (data.session) navigate(profileAfterJoin, { replace: true });
         else setNotice("Check your email for a confirmation link. After confirming, sign in and complete your profile.");
       } else {
         const { error: authError } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
@@ -61,7 +62,7 @@ export default function AuthPage({ mode }: { mode: "sign-in" | "join" }) {
               <div className="form-group"><label className="form-label" htmlFor="auth-password"><LockKeyhole size={16} /> Password *</label><input className="form-control" id="auth-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} minLength={8} autoComplete={isJoin ? "new-password" : "current-password"} required /></div>
               <button className="btn btn-primary" type="submit" disabled={busy}>{busy ? "Please wait…" : isJoin ? "Create account" : "Sign in"} <ArrowRight size={18} /></button>
             </form>
-            <p className="market-auth-switch">{isJoin ? "Already have an account?" : "New to ScriptsPlay?"} <Link to={isJoin ? "/sign-in" : "/join"}>{isJoin ? "Sign in" : "Create an account"}</Link></p>
+            <p className="market-auth-switch">{isJoin ? "Already have an account?" : "New to ScriptsPlay?"} <Link to={(isJoin ? "/sign-in" : "/join") + "?next=" + encodeURIComponent(next)}>{isJoin ? "Sign in" : "Create an account"}</Link></p>
             <p className="sp-small">By creating an account, you agree to our <Link to="/terms-of-service">terms</Link> and <Link to="/privacy-policy">privacy policy</Link>.</p>
           </div>
         </div>

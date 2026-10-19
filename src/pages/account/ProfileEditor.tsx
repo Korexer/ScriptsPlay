@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import SEO from "../../components/SEO";
 import { supabase } from "../../lib/supabase";
@@ -21,6 +21,9 @@ interface ProfileForm {
 
 export default function ProfileEditor() {
   const user = useAccountUser();
+  const [params] = useSearchParams();
+  const requestedNext = params.get("next") || "";
+  const continueTo = requestedNext.startsWith("/account/messages/new?offer=") ? requestedNext : "";
   const [form, setForm] = useState<ProfileForm>({ handle: "", display_name: "", bio: "", country_code: "", city: "", languages: "", portfolio_url: "", is_creator: false, is_public: false });
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
@@ -103,7 +106,7 @@ export default function ProfileEditor() {
         {loading ? <p role="status">Loading profile…</p> : (
           <form onSubmit={save} className="market-editor-form">
             {error && <p className="sp-form-error" role="alert">{error}</p>}
-            {saved && <p className="market-form-notice" role="status"><CheckCircle2 size={18} /> Profile saved.</p>}
+            {saved && <p className="market-form-notice" role="status"><CheckCircle2 size={18} /> Profile saved. {continueTo && <Link to={continueTo}>Continue to the offer</Link>}</p>}
             <div className="sp-form-grid"><div className="form-group"><label className="form-label" htmlFor="profile-name">Display name *</label><input className="form-control" id="profile-name" minLength={2} maxLength={100} required value={form.display_name} onChange={(event) => change("display_name", event.target.value)} /></div><div className="form-group"><label className="form-label" htmlFor="profile-handle">Public handle *</label><input className="form-control" id="profile-handle" minLength={3} maxLength={40} required value={form.handle} onChange={(event) => change("handle", event.target.value.toLowerCase())} placeholder="your-name" /></div></div>
             <div className="form-group"><label className="form-label" htmlFor="profile-bio">About you</label><textarea className="form-control" id="profile-bio" rows={4} maxLength={2000} value={form.bio} onChange={(event) => change("bio", event.target.value)} placeholder="What work do you make? What should a buyer know?" /></div>
             <div className="sp-form-grid"><div className="form-group"><label className="form-label" htmlFor="profile-country">Country code</label><input className="form-control" id="profile-country" value={form.country_code} onChange={(event) => change("country_code", event.target.value)} maxLength={2} placeholder="NG, GB, US…" /></div><div className="form-group"><label className="form-label" htmlFor="profile-city">City</label><input className="form-control" id="profile-city" value={form.city} onChange={(event) => change("city", event.target.value)} maxLength={120} /></div></div>

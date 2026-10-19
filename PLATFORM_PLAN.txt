@@ -11,7 +11,8 @@ CONFIRMED AFTER THE FIRST PLAN
   routes are removed in this branch. Existing production database records are
   preserved until the ScriptsPlay project can be inspected and migrated safely.
 - ScriptsPlay Supabase is connected. The first marketplace schema, review
-  permissions, private sample storage, and application rules were applied on
+  permissions, private sample storage, application rules, and private
+  buyer-creator messaging were applied on
   19 October 2026. Old worker records remain stored but worker API access and
   the worker welcome email are retired.
 - hello@scriptsplay.com is the chosen first review account. It must be created

@@ -41,6 +41,9 @@ const CastingEditor = lazy(() => import("./pages/account/CastingEditor"));
 const CastingApplicants = lazy(() => import("./pages/account/CastingApplicants"));
 const MyApplications = lazy(() => import("./pages/account/MyApplications"));
 const ReviewQueue = lazy(() => import("./pages/account/ReviewQueue"));
+const Inbox = lazy(() => import("./pages/account/Inbox"));
+const StartConversation = lazy(() => import("./pages/account/StartConversation"));
+const Conversation = lazy(() => import("./pages/account/Conversation"));
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -100,6 +103,9 @@ const App: React.FC = () => {
               <Route path="casting/:id/edit" element={<CastingEditor />} />
               <Route path="casting/:id/applications" element={<CastingApplicants />} />
               <Route path="applications" element={<MyApplications />} />
+              <Route path="messages" element={<Inbox />} />
+              <Route path="messages/new" element={<StartConversation />} />
+              <Route path="messages/:id" element={<Conversation />} />
               <Route path="review" element={<ReviewQueue />} />
             </Route>
             <Route path="/about" element={<AboutUs />} />
