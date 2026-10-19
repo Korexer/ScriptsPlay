@@ -1174,6 +1174,8 @@
 .public-site .market-auth-card .btn { width: 100%; justify-content: center; }
 .public-site .market-auth-switch { margin: 24px 0 8px; }
 .public-site .market-auth-switch a { font-weight: 700; }
+.public-site .market-auth-code-link { display: inline-block; margin-top: 18px; }
+.public-site .market-auth-code-input { font-size: 1.35rem; font-weight: 700; letter-spacing: .35em; }
 .public-site .market-account-section { background: var(--secondary-gray); min-height: 65vh; padding: 60px 0 100px; }
 .public-site .market-account-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
 .public-site .market-account-heading h1 { margin: 8px 0; font-size: clamp(2.2rem, 4vw, 3.5rem); }
