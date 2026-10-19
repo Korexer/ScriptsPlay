@@ -1234,6 +1234,17 @@
 .public-site .market-creator-facts { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
 .public-site .market-creator-facts span { display: inline-flex; align-items: center; gap: 7px; }
 .public-site .market-account-loading { padding-block: 80px; }
+.public-site .market-row-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.public-site .market-inline-button { border: 0; background: transparent; padding: 0; font: inherit; cursor: pointer; }
+.public-site .market-application-card, .public-site .market-review-card { border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; background: var(--white); }
+.public-site .market-application-top { display: flex; justify-content: space-between; align-items: start; gap: 20px; }
+.public-site .market-application-card h3, .public-site .market-review-card h4 { margin: 12px 0 5px; }
+.public-site .market-application-message { white-space: pre-line; background: var(--secondary-gray); padding: 17px; border-radius: 9px; margin: 20px 0; }
+.public-site .market-review-heading { margin-top: 26px; }
+.public-site .market-review-card p { white-space: pre-line; overflow-wrap: anywhere; }
+.public-site .market-review-card .market-sample-grid { margin: 20px 0; }
+.public-site .market-review-warning { color: #8a3c00; background: #fff0dc; padding: 12px 15px; border-radius: 8px; }
+.public-site .market-review-subheading { margin: 40px 0 18px; }
 
 @media (max-width: 1150px) {
   .public-site .sp-desktop-nav,

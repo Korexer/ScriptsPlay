@@ -1,5 +1,10 @@
--- ScriptsPlay marketplace foundation. Legacy worker tables are deliberately untouched.
+-- ScriptsPlay marketplace foundation. Legacy worker records are deliberately untouched.
 -- All money amounts use the smallest unit of the order currency.
+
+-- The old auth trigger enrolled every new account as a transcription worker and
+-- sent the old worker welcome email. Stop that behaviour without deleting data.
+drop trigger if exists on_auth_user_created on auth.users;
+drop function if exists public.handle_signup_and_email();
 
 create table public.marketplace_profiles (
   id uuid primary key references auth.users(id) on delete cascade,
@@ -257,9 +262,12 @@ values ('marketplace-samples', 'marketplace-samples', false, 52428800,
 on conflict (id) do nothing;
 
 create policy marketplace_samples_read on storage.objects for select to anon, authenticated
-  using (bucket_id = 'marketplace-samples' and exists
-    (select 1 from public.offer_media m join public.creator_offers o on o.id = m.offer_id
-      where m.object_path = name and (o.status = 'published' or o.creator_id = (select auth.uid()))));
+  using (bucket_id = 'marketplace-samples' and (
+    exists (select 1 from public.offer_media m join public.creator_offers o on o.id = m.offer_id
+      where m.object_path = name and o.status = 'published')
+    or (split_part(name, '/', 1) = (select auth.uid())::text and exists
+      (select 1 from public.creator_offers o where o.id::text = split_part(name, '/', 2)
+        and o.creator_id = (select auth.uid()) and o.status = 'draft'))));
 create policy marketplace_samples_owner_upload on storage.objects for insert to authenticated
   with check (bucket_id = 'marketplace-samples'
     and split_part(name, '/', 1) = (select auth.uid())::text

@@ -36,6 +36,8 @@ export default function AccountLayout() {
           <NavLink to="/account/profile">Profile</NavLink>
           <NavLink to="/account/offers">My offers</NavLink>
           <NavLink to="/account/casting">My casting calls</NavLink>
+          <NavLink to="/account/applications">My applications</NavLink>
+          {user.app_metadata?.scriptsplay_admin === true && <NavLink to="/account/review">Review queue</NavLink>}
           <Link to="/discover">Explore talent</Link>
         </nav>
         <Outlet context={{ user }} />

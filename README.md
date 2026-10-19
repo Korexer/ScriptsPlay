@@ -2,7 +2,7 @@
 
 ScriptsPlay is becoming a marketplace for creators who make video, audio, music, acting, and performance work. Buyers will be able to find talent, explore finished content, and post casting calls. The old transcription service and worker portal have been removed from the website.
 
-The public pages and a first version of account, profile, offer, sample, and casting flows are in this repository. **The marketplace is not ready for paid orders.** The database migration has not been applied to the ScriptsPlay Supabase project, and no Flutterwave merchant account or supported delayed-payout product has been confirmed. Checkout, delivery, automatic completion, and creator payouts must remain off until they are built and tested.
+The public pages and the first account, profile, offer, sample, casting, application, and review flows are in this repository. The marketplace schema is applied to the ScriptsPlay Supabase project. **The marketplace is not ready for paid orders.** No Flutterwave merchant account or supported delayed-payout product has been confirmed. Checkout, delivery, automatic completion, and creator payouts must remain off until they are built and tested.
 
 ## Stack
 
@@ -23,7 +23,11 @@ The homepage uses `public/videos/marketplace-hero.mp4`, an optimized version of 
 
 ## Database and launch gate
 
-The proposed marketplace schema is in `supabase/migrations/20261017232406_marketplace_foundation.sql`. It has not been applied. Review it against the real ScriptsPlay project, test its RLS rules and storage access, then run the migration through an authenticated deployment process. Existing worker records are preserved; removing the old portal did not delete them.
+The marketplace migrations in `supabase/migrations/` were applied to the ScriptsPlay project on 19 October 2026. They add RLS-protected marketplace tables, private sample storage, review permissions, application management, and narrow Data API grants. The old worker sign-up trigger and worker table API rules are retired, while historical rows remain stored. The unused `welcome-email` and `send-support-ticket` functions now return 410. The live contact form remains active with write-only public database access.
+
+The first review account will be `hello@scriptsplay.com`. That email must create and verify a ScriptsPlay account before an operator grants `scriptsplay_admin: true` in its Supabase Auth app metadata. Admin rights must never be set through editable user metadata. Sign out and back in after the role is added.
+
+The two retired functions had SMTP passwords written in earlier deployed versions. Rotate those mail passwords in the email provider. The active contact notification function reads its Gmail credentials from Supabase secrets.
 
 See `PLATFORM_PLAN.txt` for the full product plan and fee rules. The planned fees are 6% to buyers and 20% from creator prices. These are examples until a compliant checkout is available. An ordinary Flutterwave split payment must not be treated as a three-day escrow hold. Confirm the provider's supported hold, release, refund, and payout process before connecting real payments.
 

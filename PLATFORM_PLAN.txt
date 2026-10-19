@@ -10,9 +10,14 @@ CONFIRMED AFTER THE FIRST PLAN
 - The old private worker portal should be removed from the site. Its code and
   routes are removed in this branch. Existing production database records are
   preserved until the ScriptsPlay project can be inspected and migrated safely.
-- The Supabase connection in this Codex session currently shows Procerteed,
-  not ScriptsPlay. The user connected ScriptsPlay but a session refresh may be
-  needed before this branch's new schema can be applied and tested remotely.
+- ScriptsPlay Supabase is connected. The first marketplace schema, review
+  permissions, private sample storage, and application rules were applied on
+  19 October 2026. Old worker records remain stored but worker API access and
+  the worker welcome email are retired.
+- hello@scriptsplay.com is the chosen first review account. It must be created
+  and verified before the admin role can be added.
+- Two retired worker Edge Functions contained SMTP passwords in older versions.
+  They are disabled; those passwords must be rotated with the mail provider.
 
 PURPOSE
 ScriptsPlay will connect buyers with people who can create video, audio, music,
