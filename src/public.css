@@ -1231,6 +1231,8 @@
 .public-site .market-offer-summary ul { list-style: none; padding: 0; }
 .public-site .market-offer-summary li { display: flex; gap: 10px; align-items: center; margin-bottom: 13px; }
 .public-site .market-offer-summary .btn { width: 100%; justify-content: center; }
+.public-site .market-save-offer { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; padding: 7px 0; border: 0; background: none; color: var(--primary-blue); font: inherit; font-weight: 700; cursor: pointer; }
+.public-site .market-save-offer:disabled { opacity: .6; cursor: wait; }
 .public-site .market-creator-facts { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
 .public-site .market-creator-facts span { display: inline-flex; align-items: center; gap: 7px; }
 .public-site .market-account-loading { padding-block: 80px; }

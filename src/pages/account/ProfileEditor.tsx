@@ -23,7 +23,7 @@ export default function ProfileEditor() {
   const user = useAccountUser();
   const [params] = useSearchParams();
   const requestedNext = params.get("next") || "";
-  const continueTo = requestedNext.startsWith("/account/messages/new?offer=") ? requestedNext : "";
+  const continueTo = requestedNext.startsWith("/account/messages/new?offer=") || requestedNext.startsWith("/offer/") ? requestedNext : "";
   const [form, setForm] = useState<ProfileForm>({ handle: "", display_name: "", bio: "", country_code: "", city: "", languages: "", portfolio_url: "", is_creator: false, is_public: false });
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);

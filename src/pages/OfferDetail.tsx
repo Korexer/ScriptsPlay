@@ -6,6 +6,7 @@ import { categories } from "../content/marketplace";
 import { supabase } from "../lib/supabase";
 import type { CreatorOffer, MarketplaceProfile } from "../types/marketplace";
 import { formatMoney } from "../types/marketplace";
+import SaveOfferButton from "../components/SaveOfferButton";
 
 interface Sample { id: string; object_path: string; media_type: "image" | "video" | "audio"; caption: string; url?: string }
 
@@ -55,7 +56,7 @@ export default function OfferDetail() {
         <div className="market-detail-block"><h2>Usage rights</h2><p>{offer.usage_rights}</p></div>
         {offer.buyer_requirements && <div className="market-detail-block"><h2>What the creator needs from you</h2><p>{offer.buyer_requirements}</p></div>}
         {creator && <div className="market-detail-block"><h2>About the creator</h2><p>{creator.display_name}</p><p>{creator.bio}</p><Link className="sp-text-link" to={`/creator/${creator.handle}`}>View creator profile <ArrowRight size={17} /></Link></div>}
-      </div><aside className="market-offer-summary"><p className="sp-eyebrow">Offer details</p><strong>{formatMoney(offer.price_minor, offer.currency)}</strong><ul><li><FileCheck2 size={18} /> {offer.kind.replaceAll("_", " ")}</li><li><Clock3 size={18} /> {offer.delivery_days === 0 ? "Ready-made" : `${offer.delivery_days} day delivery`}</li><li><RotateCcw size={18} /> {offer.revisions} included revisions</li><li><MapPin size={18} /> {offer.is_remote ? "Remote" : [offer.city, offer.country_code].filter(Boolean).join(", ") || "On location"}</li></ul><p>Ask the creator about this offer. Checkout is still being prepared.</p><Link className="btn btn-primary" to={"/account/messages/new?offer=" + encodeURIComponent(offer.id)}>Message creator <ArrowRight size={18} /></Link></aside></div></section>
+      </div><aside className="market-offer-summary"><p className="sp-eyebrow">Offer details</p><strong>{formatMoney(offer.price_minor, offer.currency)}</strong><ul><li><FileCheck2 size={18} /> {offer.kind.replaceAll("_", " ")}</li><li><Clock3 size={18} /> {offer.delivery_days === 0 ? "Ready-made" : `${offer.delivery_days} day delivery`}</li><li><RotateCcw size={18} /> {offer.revisions} included revisions</li><li><MapPin size={18} /> {offer.is_remote ? "Remote" : [offer.city, offer.country_code].filter(Boolean).join(", ") || "On location"}</li></ul><p>Ask the creator about this offer. Checkout is still being prepared.</p><Link className="btn btn-primary" to={"/account/messages/new?offer=" + encodeURIComponent(offer.id)}>Message creator <ArrowRight size={18} /></Link><SaveOfferButton offerId={offer.id} offerSlug={offer.slug} /></aside></div></section>
     </>
   );
 }

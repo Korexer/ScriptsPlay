@@ -38,6 +38,7 @@ export default function AccountLayout() {
           <NavLink to="/account/casting">My casting calls</NavLink>
           <NavLink to="/account/applications">My applications</NavLink>
           <NavLink to="/account/messages">Messages</NavLink>
+          <NavLink to="/account/saved">Saved offers</NavLink>
           {user.app_metadata?.scriptsplay_admin === true && <NavLink to="/account/review">Review queue</NavLink>}
           <Link to="/discover">Explore talent</Link>
         </nav>

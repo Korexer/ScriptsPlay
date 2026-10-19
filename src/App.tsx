@@ -44,6 +44,7 @@ const ReviewQueue = lazy(() => import("./pages/account/ReviewQueue"));
 const Inbox = lazy(() => import("./pages/account/Inbox"));
 const StartConversation = lazy(() => import("./pages/account/StartConversation"));
 const Conversation = lazy(() => import("./pages/account/Conversation"));
+const SavedOffers = lazy(() => import("./pages/account/SavedOffers"));
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -106,6 +107,7 @@ const App: React.FC = () => {
               <Route path="messages" element={<Inbox />} />
               <Route path="messages/new" element={<StartConversation />} />
               <Route path="messages/:id" element={<Conversation />} />
+              <Route path="saved" element={<SavedOffers />} />
               <Route path="review" element={<ReviewQueue />} />
             </Route>
             <Route path="/about" element={<AboutUs />} />
