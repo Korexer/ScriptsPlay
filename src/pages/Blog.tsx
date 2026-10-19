@@ -7,16 +7,16 @@ export default function Blog() {
   return (
     <>
       <SEO
-        title="Whiteboard Video Journal"
-        description="Practical guides to planning business explainer videos and whiteboard lessons. Shape a clear message, brief the project, and help viewers take the next step."
+        title="ScriptsPlay Journal"
+        description="Practical guides for buyers briefing video creators and creators selling video, audio, music, acting and performance work."
       />
       <PageIntro
         eyebrow="The ScriptsPlay journal"
-        title="Better stories start with clearer thinking."
+        title="Make better work together."
       >
         <p>
-          Practical notes on planning, writing, and using whiteboard videos for
-          your business.
+          Useful notes for buyers who need creative work and creators who want
+          to earn from their skills.
         </p>
       </PageIntro>
       <section className="sp-section">
@@ -33,7 +33,7 @@ export default function Blog() {
               </h2>
               <p>{a.description}</p>
               <p className="sp-small">
-                Korex at ScriptsPlay · September 13, 2026
+                Korex at ScriptsPlay · October 18, 2026
               </p>
               <Link className="sp-text-link" to={a.path}>
                 Read the guide <ArrowRight size={17} />
@@ -43,8 +43,8 @@ export default function Blog() {
         </div>
       </section>
       <CTA
-        title="Put the idea into practice."
-        text="Have a message your audience needs to understand? Send us a short brief and we’ll help plan the video."
+        title="Have an idea to make real?"
+        text="Tell us about the project you need made, or introduce the creative work you offer."
       />
     </>
   );

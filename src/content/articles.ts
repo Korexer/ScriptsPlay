@@ -1,128 +1,86 @@
 export const articles = [
   {
-    path: "/blog/how-to-plan-a-whiteboard-explainer-video",
-    title: "How to plan a whiteboard explainer people can follow",
-    category: "Video strategy",
-    description:
-      "Choose one audience, one message, and one next step. A practical guide to turning a complicated business idea into a focused video brief.",
+    path: "/blog/how-to-brief-a-video-creator",
+    title: "How to brief a video creator so the first draft is useful",
+    category: "For buyers",
+    description: "A practical guide to defining the audience, deliverable, style, usage rights, and review steps before hiring a creator.",
     sections: [
       {
-        title: "Start with the question your viewer is asking",
+        title: "Start with the job the content must do",
         paragraphs: [
-          "A whiteboard video starts with a communication problem, not a drawing style. Perhaps customers cannot see how your service fits their day. Perhaps a course needs a clearer introduction. Write that problem in a single sentence before you write any narration.",
-          "Be specific about the viewer. “A small business owner comparing accounting services” is more useful than “everyone who needs finance help.” The narrower description gives you a starting point for the language, examples, and next step.",
+          "A creator can make a great video and still miss your goal if the brief is unclear. Begin with the situation: who will watch, where they will see it, and what they should understand or feel afterward. A product demonstration for a new customer needs a different approach from a comedy skit for people who already know your brand.",
+          "Write one main goal rather than a long list of hopes. For example: ‘Introduce our delivery service to first-time buyers in a 30-second vertical video.’ Add the action you want the viewer to take, such as visiting a page or remembering a name. Avoid promising a sales result the creator cannot control.",
         ],
       },
       {
-        title: "Give the video one job",
+        title: "Name the exact deliverable",
         paragraphs: [
-          "Choose one outcome for this video: help someone understand a product, explain a process, introduce a course, or invite a sales conversation. Trying to do all four in a short video usually produces a list of features without a clear story.",
-          "Write a sentence that begins, “After watching, the viewer should understand…” Then check each proposed scene against it. If a detail does not help that outcome, it may belong on the landing page or in a second video.",
+          "State whether you need a finished video, raw footage, voice recording, music track, live appearance, or several files. Include the number of versions, approximate length, format, orientation, captions, and whether you need editable source files. ‘One short video’ leaves too many decisions open.",
+          "Give the creator a realistic deadline and note any fixed event date. If you have a script, share it. If you need the creator to write the script, say so and include that work in the scope. Confirm who provides props, product samples, travel, locations, or other costs.",
         ],
       },
       {
-        title: "Use a problem, a change, and a next step",
+        title: "Show the style without asking for a copy",
         paragraphs: [
-          "A useful structure is simple: show a familiar situation, explain what changes, and tell the viewer what to do next. For example, a scheduling product could open with two people being assigned to the same job, show how a shared schedule gives the team a common view, then invite the viewer to explore that workflow.",
-          "Describe what the product actually does. Do not add dramatic time savings or revenue claims unless you have evidence and permission to use them. A clear, accurate example is more useful than a large promise that needs explaining later.",
+          "A few examples can help explain pace, tone, lighting, or humour. Tell the creator which part of each example matters. A link with no notes may lead them to copy the wrong detail or assume you want a near duplicate.",
+          "Review the creator’s own samples for the skill you actually need. A strong acting sample does not automatically show that someone can edit a polished ad, and a large social following does not prove they can deliver your specific role. Ask about the missing skill before you book.",
         ],
       },
       {
-        title: "Pair each line with a visual purpose",
+        title: "Agree on use and permissions",
         paragraphs: [
-          "Put the narration in one column and the scene idea in another. A drawing can show a relationship, a sequence, a comparison, or a change. It does not need to illustrate every word literally.",
-          "If the narration says work moves from request to approval, draw the handoff. If it explains a choice, show two paths. Avoid filling the screen with text while the voice says the same long sentence. A short label can support the spoken explanation.",
+          "Where can you publish the finished work: your website, social accounts, paid ads, television, or a client’s channel? For how long and in which countries? Can you edit it later or give it to another party? Usage rights can affect price, so settle them before work starts.",
+          "Make sure anyone shown or heard in the work has given the needed permission. Agree on music, stock media, logos, and any third-party material. For a creator recording a script for your account, say whether their name or likeness will appear and whether the content may also appear on their own page.",
         ],
       },
       {
-        title: "Read the script aloud before setting the length",
+        title: "Plan one clear review path",
         paragraphs: [
-          "A script that looks short on a page can sound rushed when read aloud. Record a rough reading, leaving space for important drawings and pauses. Use that recording to discuss length with your production partner.",
-          "If it runs long, first remove repeated ideas and background details. Do not solve every timing problem by speaking faster. A longer video may be appropriate for a lesson, while a product introduction may need a narrower scope.",
-        ],
-      },
-      {
-        title: "Plan for where the video will appear",
-        paragraphs: [
-          "A website explainer, a social post, and a lesson inside a course have different viewing conditions. Tell your production partner the intended channel and the required aspect ratio. Keep small labels readable on the devices your audience uses.",
-          "Consider narration, on-screen text, and subtitle options in the brief. Put the key action where the viewer can use it: a nearby enquiry form, a course link, or a product demo. The end of the video and the page around it should point in the same direction.",
-        ],
-      },
-      {
-        title: "Prepare a brief that makes decisions easier",
-        paragraphs: [
-          "Include the audience, the main problem, the approved product facts, the desired action, brand assets, intended channels, deadline, and budget. Share examples to explain your preferences, while making clear which parts you like.",
-          "Agree who gives final approval. Review the script and scene plan before animation begins, then gather feedback into one clear set of notes. This gives the project a useful decision point before changes become more involved.",
-        ],
-      },
-      {
-        title: "Bring the rough idea to ScriptsPlay",
-        paragraphs: [
-          "You do not need a finished script to start a conversation. Send your website and a short description of what you want the viewer to understand. ScriptsPlay can help shape the message, plan the scenes, and quote for a whiteboard video that fits the brief.",
+          "Choose one person to collect feedback and approve the work. Set a review window, the number of included revisions, and what counts as a new request. A change to an agreed word or timing is different from asking for a new concept after filming.",
+          "A useful brief does not need to be long. The goal, deliverable, examples, rights, deadline, and review path can fit on one page. The point is to give the creator enough information to price the work fairly and make a first draft that moves the project forward.",
         ],
       },
     ],
   },
   {
-    path: "/blog/whiteboard-videos-for-training-and-onboarding",
-    title: "Turn a training topic into a useful whiteboard lesson",
-    category: "Training & education",
-    description:
-      "Build a short visual lesson around a real decision, then connect it to practice. A guide for training providers and customer education teams.",
+    path: "/blog/turn-creative-skill-into-an-offer",
+    title: "Turn your creative skill into an offer a buyer can understand",
+    category: "For creators",
+    description: "Show your best samples, define what a buyer receives, set useful boundaries, and make your creative work easier to buy.",
     sections: [
       {
-        title: "Begin with something the learner needs to do",
+        title: "Choose a clear starting offer",
         paragraphs: [
-          "“Understand our process” is a broad aim. “Know where to send a request and what information to include” gives a lesson a practical purpose. Choose an action or decision that can be explained with one clear example.",
-          "Whiteboard animation can make a sequence or relationship visible. It works best when the drawing helps the learner follow the idea. It does not replace supervised practice, assessment, or specialist guidance where those are needed.",
+          "‘I can make content’ describes a talent, but it does not tell a buyer what they can order. A more useful offer names the result: a short comedic product skit, a warm voice recording of a supplied script, a custom instrumental beat, or an actor for a local scene. Start with a format you can deliver well and repeat.",
+          "You can offer several things later. At first, make each offer narrow enough to price and explain. A buyer should understand the format, length, delivery time, and what they need to provide without sending a long message. If work depends on travel, equipment, or a location, make that clear.",
         ],
       },
       {
-        title: "Choose a familiar situation",
+        title: "Let samples answer the buyer’s main question",
         paragraphs: [
-          "Start with a moment the learner can recognise. A new colleague receives a request with missing information. A manager needs to give feedback. A customer is opening a product for the first time. Give the scene enough context to explain why the next action matters.",
-          "For a request-handling lesson, show an incomplete brief arriving in an inbox. Instead of blaming the sender, show the recipient checking what is missing and asking a focused question. The lesson now has a practical problem to solve.",
+          "Pick samples that show the exact skill in the offer. For voice acting, include a clean recording with a range of tones. For dance, show the full movement clearly. For a scripted ad, show storytelling and delivery, not only views or likes. Short, well-labelled examples are easier to review than a large collection with no context.",
+          "Only upload work you own or have permission to show. If a past project is confidential, make a fresh sample instead. Say what part you performed: writing, acting, filming, editing, music, or more than one. That makes your contribution easy to judge.",
         ],
       },
       {
-        title: "Show a decision and its consequence",
+        title: "Set scope before setting a price",
         paragraphs: [
-          "Useful teaching goes beyond “click here” or “follow the process.” Explain why the action is taken. Show what happens if the request moves forward without the missing information, then show the clearer handoff after the question is answered.",
-          "Keep the consequence realistic. You do not need a disaster to make the point. A delayed review, duplicated work, or a confused colleague can explain the value of a better process without exaggeration.",
+          "List the work involved: planning, scripting, rehearsal, production, editing, and delivery. Include the number of finished files and covered revisions. Think about any third-party costs, taxes, payment fees, and the time needed to respond to feedback. A price that ignores these steps may leave you doing unpaid work.",
+          "For ready-made content, decide what a buyer can do with the file and whether the sale is exclusive. An exclusive sale, a limited social licence, and a broad paid-ad licence are different products. Do not promise rights in music, images, or appearances you cannot grant.",
         ],
       },
       {
-        title: "Use a small number of visual steps",
+        title: "Ask for what you need to do the job",
         paragraphs: [
-          "For this example, the scene plan could use three cards: check the request, ask for the missing detail, and confirm the next owner. Repeat those labels in the narration so the learner can connect the words to the drawing.",
-          "Do not put a whole handbook on screen. Keep supporting details in the course materials and use the video to explain the part that benefits from movement, sequence, or comparison. Split unrelated topics into separate lessons.",
+          "Write a short list of questions for the buyer: Who is the audience? What must be said or avoided? Where will the work be used? What brand assets and product facts are approved? Is there a hard deadline? Good questions can save a full round of corrections.",
+          "If the brief changes after work begins, put the new request in writing with an updated price or deadline before continuing. Keep your own record of agreed scripts, files, messages, and delivery dates. Clear records help both sides when there is a disagreement.",
         ],
       },
       {
-        title: "Make the lesson work with the rest of the course",
+        title: "Make it easy for the right buyer to say yes",
         paragraphs: [
-          "A video is one part of a learning experience. Follow it with a realistic question, a short task, or a discussion. For the request example, show a new brief and ask the learner what they would clarify before passing it on.",
-          "For product onboarding, connect the explanation to a task the customer can complete in the actual product. A conceptual animation can introduce the workflow, while a separate screen demonstration can show the current interface.",
-        ],
-      },
-      {
-        title: "Keep approved information close to the production",
-        paragraphs: [
-          "Ask the subject expert to approve the script and key scene details. This is particularly important when a lesson touches safety, health, compliance, or a regulated process. Use the provider’s approved procedures and avoid making a sample video sound like a recognised qualification.",
-          "Keep a version record for the script and note which process it explains. If a policy or product changes, review the lesson and related materials together. A short modular lesson can be easier to revise than a video that tries to cover the entire course.",
-        ],
-      },
-      {
-        title: "Design for the people watching",
-        paragraphs: [
-          "Use plain language, readable labels, and enough time to follow a scene. Explain specialist terms when the audience needs them. Discuss narration and subtitle requirements as part of the project brief, rather than leaving them until delivery.",
-          "Review a draft on the device or learning platform where it will be used. Check whether small text is readable, whether the audio is clear, and whether the final instruction points to a real next activity.",
-        ],
-      },
-      {
-        title: "Start with one lesson",
-        paragraphs: [
-          "Choose a topic that creates repeated questions and define the action you want the learner to take. Share the approved material, the learner profile, and where the video will appear. ScriptsPlay can help turn that brief into a focused whiteboard lesson and a clear project quote.",
+          "A buyer may be looking for your city, language, voice style, on-camera presence, or genre. Add those details to your profile when they are relevant. A small audience is not a weakness when your samples show that you fit the role. Do not inflate views, experience, or outcomes; buyers need a trustworthy picture of what you can do.",
+          "ScriptsPlay is being built to connect creative people with buyers of video, audio, and performance work. While the marketplace is under construction, you can introduce yourself and send a link to original samples through our contact page.",
         ],
       },
     ],

@@ -1,130 +1,19 @@
 import SEO from "../components/SEO";
 import { PageIntro } from "../components/public/PublicUI";
+
 export default function TermsOfService() {
   return (
     <>
-      <SEO
-        title="Terms of Service"
-        description="Terms for ScriptsPlay public website use and enquiries about whiteboard animation projects, quotes, revisions, and delivery."
-      />
-      <PageIntro eyebrow="Working together" title="Terms of service">
-        <p>
-          Public website and whiteboard video projects · Updated September 13,
-          2026
-        </p>
-      </PageIntro>
+      <SEO title="Terms of Service" description="Terms for using ScriptsPlay's website, accounts, creator offers and casting calls during its staged launch." />
+      <PageIntro eyebrow="Using ScriptsPlay" title="Terms of service"><p>Website and early marketplace features · Updated October 18, 2026</p></PageIntro>
       <div className="container sp-reading sp-article-body sp-legal">
-        <section>
-          <h2>Scope of these terms</h2>
-          <p>
-            These terms describe use of scriptsplay.com and enquiries about
-            ScriptsPlay’s whiteboard animation service. A written project
-            agreement or accepted quote sets the terms of a paid project. These
-            public terms do not amend existing private worker or contractor
-            arrangements.
-          </p>
-        </section>
-        <section>
-          <h2>Quotes and project approval</h2>
-          <p>
-            Sending an enquiry does not place an order or authorise a charge.
-            Before production begins, we agree the scope, price and currency,
-            payment schedule, delivery plan, and review process in writing. Any
-            taxes, fees, or third-party costs should be identified in that
-            agreement. Website examples are illustrative unless expressly
-            identified as completed work.
-          </p>
-        </section>
-        <section>
-          <h2>What your project includes</h2>
-          <p>
-            The accepted scope defines script work, scene planning, animation,
-            voiceover, music, on-screen text, video length, output formats, and
-            revision rounds. Extra versions, new scenes, or changes to an
-            approved script may change the cost and schedule. Editable files are
-            included only where agreed.
-          </p>
-        </section>
-        <section>
-          <h2>Your materials and approvals</h2>
-          <p>
-            You are responsible for having permission to use materials you
-            provide, including logos, images, scripts, music, and personal
-            information. Please provide accurate product details and have an
-            authorised person review the script, visual direction, claims, and
-            draft video. We may decline content that infringes rights, is
-            unlawful, or misrepresents a person or business.
-          </p>
-          <p>
-            If your video concerns a regulated or specialist subject, arrange
-            review by a qualified person. Animation is a communication format
-            and does not itself provide professional certification or advice.
-          </p>
-        </section>
-        <section>
-          <h2>Timelines and changes</h2>
-          <p>
-            Delivery dates are agreed after reviewing the brief. They depend on
-            receiving materials, approvals, and payments as scheduled. If
-            feedback is delayed or the scope changes, we will discuss an updated
-            schedule. A requested deadline is not confirmed until accepted in
-            writing.
-          </p>
-        </section>
-        <section>
-          <h2>Usage rights and third-party assets</h2>
-          <p>
-            You retain your rights in materials you provide. The project
-            agreement specifies the rights to the final video and when those
-            rights take effect, including any payment conditions. Fonts, music,
-            stock assets, voices, and production tools may carry separate
-            licence restrictions. We agree relevant licensing and use
-            requirements as part of the project.
-          </p>
-          <p>
-            We will ask before displaying your commissioned video or identifying
-            you as a client in our public portfolio. A private sample is a
-            concept for discussion and should not be presented as an approved
-            client project.
-          </p>
-        </section>
-        <section>
-          <h2>AI-assisted production</h2>
-          <p>
-            AI tools may assist with drafts, narration, or animation. Tell us
-            about restrictions on AI use, confidential information, voice
-            choices, and brand assets before supplying them. Agreed requirements
-            form part of the scope. Human review and client approval remain part
-            of the project process.
-          </p>
-        </section>
-        <section>
-          <h2>Cancellation and project concerns</h2>
-          <p>
-            Payment, cancellation, and refund arrangements are set out in your
-            written agreement. Contact us promptly if you want to pause, change,
-            or cancel work so we can confirm the work completed and the options
-            available. Nothing in these public terms removes rights that cannot
-            lawfully be excluded.
-          </p>
-        </section>
-        <section>
-          <h2>Results and website use</h2>
-          <p>
-            A video’s commercial results depend on its audience, message,
-            distribution, offer, and other factors. We do not guarantee sales,
-            conversion rates, views, or learner outcomes. Use this website
-            lawfully and do not misuse its forms, interfere with its operation,
-            or submit material you are not entitled to share.
-          </p>
-        </section>
-        <section>
-          <h2>Contact</h2>
-          <p>
-            Questions about a quote, a project, or these terms? Email{" "}
-            <a href="mailto:hello@scriptsplay.com">hello@scriptsplay.com</a>.
-          </p>
-        </section>
+        <section><h2>What these terms cover</h2><p>These terms cover the website and any account, profile, offer, sample, and casting features made available at scriptsplay.com during its staged launch. Orders, checkout, and payouts are not active. We will publish separate transaction terms before purchases become available.</p></section>
+        <section><h2>Enquiries are not orders</h2><p>Sending a buyer brief, creator introduction, offer, or casting application does not place an order, guarantee a match, or authorise a charge. We may reply to discuss your needs or interest. A future paid project will need a separate agreement that states the work, price, currency, timing, payment method, review process, and usage rights.</p></section>
+        <section><h2>Your materials</h2><p>You are responsible for the content, links, and samples you submit. Only share material you own or are allowed to use and show. Do not submit unlawful, misleading, infringing, abusive, or harmful content. We may review, reject, or remove listings and restrict accounts that misuse the service. Do not send sensitive personal data or payment card information through public forms.</p></section>
+        <section><h2>Creative work and rights</h2><p>Creator samples and project examples remain the property of their owners. By choosing to make a profile or listing public, you allow ScriptsPlay to display the content you provide for that purpose. Private samples remain restricted until their offer is approved and published. For any future order, the parties must agree what the buyer receives and how the finished video, audio, or performance may be used. A listing or enquiry does not grant exclusivity or commercial usage rights.</p></section>
+        <section><h2>Fees and future marketplace features</h2><p>Our fees page describes the planned 6% buyer fee and 20% creator fee. These are illustrative until checkout opens in a supported country and currency. Any final price, applicable taxes, processor charges, and payout terms must be shown before an order is accepted. We will publish the full order, revision, cancellation, dispute, and payment terms before live transactions begin.</p></section>
+        <section><h2>Website use and availability</h2><p>Use the website lawfully. Do not interfere with its operation, attempt to access another person’s data, or misuse its forms. We may change or pause public features as the marketplace is developed. We do not promise that a creator will find work or that a buyer will find a particular talent.</p></section>
+        <section><h2>Contact</h2><p>Questions about these terms or a possible project can be sent to <a href="mailto:hello@scriptsplay.com">hello@scriptsplay.com</a>.</p></section>
       </div>
     </>
   );

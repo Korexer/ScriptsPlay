@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Play, ArrowUpRight } from "lucide-react";
 const links = [
-  ["/", "Home"],
-  ["/services", "Services"],
-  ["/about", "About"],
-  ["/blog", "Journal"],
+  ["/discover", "Find talent"],
+  ["/content", "Ready-made content"],
+  ["/casting", "Casting calls"],
+  ["/how-it-works", "How it works"],
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -33,8 +33,9 @@ export default function Header() {
             </NavLink>
           ))}
         </nav>
-        <Link className="sp-nav-cta" to="/contact">
-          Request a quote <ArrowUpRight size={17} />
+        <Link className="sp-nav-signin" to="/sign-in">Sign in</Link>
+        <Link className="sp-nav-cta" to="/become-a-creator">
+          Become a creator <ArrowUpRight size={17} />
         </Link>
         <button
           type="button"
@@ -53,7 +54,7 @@ export default function Header() {
           className="sp-mobile-nav"
           aria-label="Mobile navigation"
         >
-          {[...links, ["/contact", "Request a quote"]].map(([to, label]) => (
+          {[...links, ["/become-a-creator", "Become a creator"], ["/sign-in", "Sign in"]].map(([to, label]) => (
             <NavLink
               key={to}
               to={to}

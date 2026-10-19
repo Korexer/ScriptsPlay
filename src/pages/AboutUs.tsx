@@ -1,101 +1,43 @@
 import SEO from "../components/SEO";
 import { PageIntro, CTA, Checklist } from "../components/public/PublicUI";
+
 export default function AboutUs() {
   return (
     <>
-      <SEO
-        title="About ScriptsPlay"
-        description="Meet ScriptsPlay: whiteboard animation for businesses, educators, and agencies. Clear scripts, purposeful visuals, and a straightforward production process."
-      />
-      <PageIntro
-        eyebrow="About ScriptsPlay"
-        title="Good ideas deserve a clear explanation."
-      >
-        <p>
-          We help businesses turn what they know into videos their audience can
-          follow.
-        </p>
+      <SEO title="About ScriptsPlay" description="ScriptsPlay is building a place where creators can earn from their talent and buyers can find the right people for video, audio and performance." />
+      <PageIntro eyebrow="About ScriptsPlay" title="Talent should be easier to find. And easier to earn from.">
+        <p>ScriptsPlay is a home for people who make video, audio, and live creative work, and for the people who need that work made.</p>
       </PageIntro>
       <section className="sp-section">
         <div className="container sp-split">
           <div>
-            <p className="sp-eyebrow">Why we do this</p>
-            <h2>Understanding comes before the next step.</h2>
-            <p>
-              A customer cannot value a service they do not understand. A
-              learner needs more than a wall of information. And a useful idea
-              should not get lost in a long explanation.
-            </p>
-            <p>
-              ScriptsPlay creates whiteboard animation videos that connect your
-              message to a real audience need. We start with the story, then use
-              drawings, movement, and narration to make the path easier to
-              follow.
-            </p>
+            <p className="sp-eyebrow">Why we are building this</p>
+            <h2>Good work can get lost in a crowded feed.</h2>
+            <p>A creator may have the right voice, acting style, music, or local knowledge for a project, yet never appear in a buyer’s search. A buyer may know exactly what they need but have no clear way to find that person.</p>
+            <p>We want to make creative skills easier to show, search, and buy. The work matters more than the size of someone’s following.</p>
           </div>
           <div className="sp-note-card">
             <p className="sp-eyebrow">A note from Korex</p>
-            <h3>“Let’s make the useful part easy to see.”</h3>
-            <p>
-              I’m Korex, the person behind ScriptsPlay. Bring your idea, even if
-              it is still rough. We’ll work out who it is for, what matters
-              most, and how a short video can explain it.
-            </p>
+            <h3>“Show people what you can do.”</h3>
+            <p>I started ScriptsPlay because creators should have more ways to earn from their work. Buyers should be able to find the right person for a role, a piece of content, or a collaboration without searching through endless posts.</p>
             <p className="sp-signature">Korex / ScriptsPlay</p>
           </div>
         </div>
       </section>
       <section className="sp-section sp-soft">
         <div className="container">
-          <div className="sp-section-heading">
-            <p className="sp-eyebrow">Our approach</p>
-            <h2>Simple communication. Thoughtful production.</h2>
-          </div>
+          <div className="sp-section-heading"><p className="sp-eyebrow">What we are making possible</p><h2>More than one way to turn an idea into something real.</h2></div>
           <div className="sp-grid-three">
-            {[
-              [
-                "Start with the audience",
-                "We ask what the viewer already knows, what is confusing, and what they need to do next.",
-              ],
-              [
-                "Make every scene useful",
-                "Each drawing should explain something. We focus the script and scene plan before adding movement.",
-              ],
-              [
-                "Keep the project clear",
-                "You receive a defined scope and review points. Decisions about timing, revisions, and delivery happen before they become surprises.",
-              ],
-            ].map(([title, text]) => (
-              <div className="sp-card" key={title}>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </div>
-            ))}
+            <div className="sp-card"><h3>Find a creator</h3><p>Search by skill, style, language, and location. Review original samples and a clear offer before starting a project.</p></div>
+            <div className="sp-card"><h3>Buy finished content</h3><p>Find video or audio already made, with the intended use and rights explained before purchase.</p></div>
+            <div className="sp-card"><h3>Open a role</h3><p>Describe a character, collaboration, or creative brief so suitable creators can put themselves forward.</p></div>
           </div>
         </div>
       </section>
       <section className="sp-section">
         <div className="container sp-split">
-          <div>
-            <h2>
-              Your knowledge.
-              <br />
-              Our visual storytelling.
-            </h2>
-            <p>
-              You remain the expert on your product, course, or service. We use
-              your approved information to develop the story and invite your
-              feedback throughout the project.
-            </p>
-          </div>
-          <Checklist
-            items={[
-              "For businesses, training providers, and agencies",
-              "Remote collaboration through a clear written brief",
-              "AI-assisted tools with human review",
-              "Brand and confidentiality requirements discussed upfront",
-            ]}
-          />
+          <div><p className="sp-eyebrow">Our approach</p><h2>Clear terms help people make better work.</h2><p>We are designing offers around the details that matter: the deliverable, deadline, revisions, price, and usage rights. The marketplace is being built in stages. Until buying and selling opens, you can tell us about your project or introduce your work.</p></div>
+          <Checklist items={["Creators of all audience sizes can show their skills", "Buyers can brief custom video, audio, and performance work", "Ready-made content has clear usage terms", "Fees and order steps are explained before payment"]} />
         </div>
       </section>
       <CTA />

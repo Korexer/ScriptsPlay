@@ -1,0 +1,195 @@
+SCRIPTSPLAY CREATOR MARKETPLACE PLAN
+Version: 18 October 2026
+
+CONFIRMED AFTER THE FIRST PLAN
+- Launch is intended for multiple countries and currencies. Each supported
+  country/currency pair still needs payment and payout verification.
+- ScriptsPlay does not yet have a Flutterwave merchant account. Checkout and
+  creator payouts cannot be activated until account approval and the delayed
+  settlement product are confirmed.
+- The old private worker portal should be removed from the site. Its code and
+  routes are removed in this branch. Existing production database records are
+  preserved until the ScriptsPlay project can be inspected and migrated safely.
+- ScriptsPlay Supabase is connected. The first marketplace schema, review
+  permissions, private sample storage, application rules, and private
+  buyer-creator messaging, and saved offers were applied on
+  19 October 2026. Old worker records remain stored but worker API access and
+  the worker welcome email are retired.
+- hello@scriptsplay.com is the chosen first review account. It must be created
+  and verified before the admin role can be added.
+- Two retired worker Edge Functions contained SMTP passwords in older versions.
+  They are disabled; those passwords must be rotated with the mail provider.
+
+PURPOSE
+ScriptsPlay will connect buyers with people who can create video, audio, music,
+spoken-word, performance, and entertainment content. Creators may sell a custom
+service, sell ready-made content, or apply to a buyer's casting call or project
+brief. The existing whiteboard-animation service will be replaced across the
+public website. Keep the ScriptsPlay colour palette, fonts, clear style, and
+fast loading time. The new product must have its own design, text, and identity.
+
+MAIN WAYS TO BUY
+1. Custom Creator Offers: a buyer orders a specified video, audio, live or
+   recorded performance, music piece, or local role from a creator.
+2. Ready-Made Content: a buyer previews and buys a clearly defined licence to
+   use a completed video or audio file.
+3. Casting Calls and Project Briefs: a buyer describes a role or project,
+   receives applications, and hires a suitable creator.
+
+FIRST CATEGORIES
+Scripted advertisements and user-generated-style video; acting, skits, comedy,
+and film roles; voice acting, narration, poetry, and eulogies; music, beats,
+instrumentals, singing, and dance. Leave room for live streams, magic, and new
+categories. Launch with enough real creators in a few categories before
+expanding the full catalogue.
+
+PRODUCT PRINCIPLES
+- A buyer and creator may use the same account and switch roles.
+- Search by skill and product first, then narrow by category, location,
+  language, format, budget, availability, delivery time, and licence terms.
+- Give new and smaller creators fair exposure. Rank on relevance, sample
+  quality, response, completion, and recent activity, not follower count alone.
+- Show actual samples and exact deliverables before purchase.
+- Protect originals before payment and record the purchased rights.
+- Use plain language for prices, fees, deadlines, revisions, disputes, and
+  completion rules.
+
+PUBLIC SITE
+Homepage; category index and category pages; search and results; creator
+profiles; Creator Offer detail pages; ready-made content catalogue and detail
+pages; casting calls; how it works; become a creator; buyer guide; trust and
+safety; fees; help; about; contact; terms; privacy; buyer and creator terms;
+licence rules; refund and dispute rules; and useful, search-friendly guides.
+Remove stale whiteboard-animation and transcription messaging. Preserve and
+redirect old public URLs where relevant. Keep sitemap, metadata, canonical
+URLs, and crawlable public pages current.
+
+PUBLIC AND SIGNED-IN HOME
+Public visitors see the core promise, search, categories, real samples, how it
+works, and clear paths to buy or join. Signed-in buyers see search, saved
+creators/content, recent interests, relevant offers, casting calls, messages,
+notifications, and orders. Creators see an actionable dashboard for offers,
+applications, current work, earnings, and availability. A compressed, muted
+desktop hero video uses the user-provided asset; mobile uses the brand-colour
+background without any video or poster image. Respect reduced-motion settings.
+
+CREATOR OFFER CREATION
+Use a guided, auto-saving process:
+1. Choose custom service, ready-made content, or physical role.
+2. Enter title, category, tags, language, location, and description.
+3. Define the exact deliverable, duration/format, price, turnaround,
+   revisions, and optional package tiers or extras.
+4. Define personal/commercial usage, exclusivity, advertising use,
+   attribution, editing rights, and ownership.
+5. Specify the buyer information and files needed to start.
+6. Add video/audio samples, thumbnails, and portfolio media.
+7. Set capacity, availability, travel area, and whether to review requests
+   before an order begins.
+8. Preview and submit for moderation; publish approved offers.
+Build category-specific fields without making all creators fill irrelevant
+questions. Allow a creator to edit, pause, or archive their offer.
+
+DISCOVERY AND PURCHASE
+Show sample media, creator identity, verified facts, price, delivery time,
+licence summary, rating, and available dates where relevant. An Offer page
+explains each package, extras, requirements, FAQs, creator background,
+samples, reviews, and a clear purchase or contact action. Buyers can save
+items. Casting calls support location, role, budget, deadline, audition
+requirements, applications, shortlists, and hiring.
+
+ORDER AND DELIVERY FLOW
+Buyer selects an offer/package or accepts a custom quote. The server computes
+the final price and creates a pending order. The buyer pays. A signed and
+verified Flutterwave event moves the order to paid. The buyer supplies required
+information. The creator works, sends a protected preview or final delivery,
+and marks the service delivered. Notify the buyer immediately. The buyer may
+accept or request an allowed revision. If the buyer takes no action for three
+full days after verified delivery and notice, complete the order automatically
+unless a dispute, revision request, refund review, chargeback, or other hold is
+open. Completion makes the creator payout eligible. Record every state change,
+time, actor, amount, and provider reference. Payout workers must be idempotent
+and must verify settlement and transfer outcomes. A human administrator can
+pause or resolve a disputed order. Ready-made content needs a separate instant
+delivery and licence flow with payment verification and protected download.
+
+FEES AND PAYMENT MATH
+For an offer price of 100 units, the buyer pays 106 units: price 100 plus a 6%
+buyer fee of 6. The creator receives 80 units after ScriptsPlay's 20% creator
+fee of 20. ScriptsPlay's gross fee is 26 units before Flutterwave charges,
+taxes, refunds, disputes, and transfer costs. Show this calculation before
+checkout and in creator earnings. Store amounts in the currency's smallest
+unit and define rounding in one server-side function. Never trust totals sent
+by the browser. Define who absorbs provider fees before live launch.
+
+FLUTTERWAVE ESCROW GATE
+Flutterwave's currently documented split payment sends the creator's share
+on the provider settlement cycle, so an ordinary split at checkout does not
+meet the requested three-day hold and release rule. An older v2 escrow guide
+exists, but its availability and terms for this account must be confirmed
+with Flutterwave before production. Obtain explicit confirmation of the
+supported hold-and-release product, allowed countries/currencies, payout
+account setup, refund/dispute process, and regulatory handling. Build and test
+the order state machine and fee calculation first. Do not charge customers or
+call a split flow 'escrow' until provider support is confirmed. Keep payment
+secrets server-side. Verify webhook signatures and confirm status, reference,
+amount, and currency directly with Flutterwave. Prevent duplicate webhooks,
+completions, and payouts.
+
+CREATOR AND BUYER AREAS
+Buyer: profile, saved items, casting calls, orders, messages, purchased files,
+licences, reviews, invoices, notifications, and settings.
+Creator: onboarding, public profile, samples, offer creation and management,
+ready-made uploads, casting applications, orders, messages, earnings, payout
+status, availability, reviews, notifications, and verification.
+
+ADMINISTRATION AND TRUST
+Manage users, categories, offers, media review, creator verification,
+copyright reports, prohibited content, casting calls, disputes, refunds,
+payout exceptions, fee settings, and audit logs. Require rights to uploaded
+work and consent for people in it. Make local-role safety, travel, scheduling,
+auditions, and release terms clear. Define age limits and moderation rules.
+Avoid fake testimonials, impersonation, deceptive ad claims, and unlicensed
+media. Keep genuine reviews tied to completed orders.
+
+TECHNICAL STRUCTURE
+Keep the existing React, TypeScript, Vite, and Vercel application unless code
+review shows a strong reason to change it. Reuse the brand tokens and
+performance habits. Use Supabase Auth, Postgres, Storage, and carefully scoped
+Row Level Security. Keep private order media behind signed access. Use server
+functions for price calculation, checkout creation, Flutterwave verification,
+webhooks, scheduled completion, and payouts. Add background media processing
+for thumbnails, previews, compression, and watermarking. Use database-backed
+search for the first release; add a dedicated search service only if needed.
+Do not expose service-role keys or payment secrets in Vite browser variables.
+Preserve existing production tables and user data until their role is known.
+
+DATA AREAS
+Accounts and profiles; creator profiles; categories and skills; Creator
+Offers; packages and extras; portfolio and private media; ready-made content
+and licences; casting calls and applications; orders and order requirements;
+delivery and revisions; conversation messages; payment attempts; immutable
+fee snapshots; payout requests and outcomes; saved items; reviews;
+notifications; reports; moderation decisions; and audit history.
+
+BUILD ORDER
+1. Audit the current repository, Supabase project, routes, and live content.
+2. Confirm first countries, currencies, provider capability, usage rights,
+   creator payout rules, and final fee handling.
+3. Design the database, RLS, private media, and transition from legacy data.
+4. Build new public discovery, category, creator profile, and Offer pages.
+5. Build creator and buyer onboarding and Creator Offer creation.
+6. Build messages, casting calls, saved items, and dashboards.
+7. Build checkout, verified orders, delivery, revisions, completion, and
+   provider-supported payout flow in test mode.
+8. Build ready-made purchase, licence records, and secure downloads.
+9. Build admin review, disputes, refunds, notification jobs, and reporting.
+10. Migrate public SEO pages and redirects, run security and performance
+    checks, test complete buyer and creator journeys, then launch with a
+    small set of approved creators.
+
+ACCESS AND RELEASE CHECKS
+GitHub repository: Korexer/ScriptsPlay. ScriptsPlay Supabase project and
+Flutterwave account must be connected and identified before database or
+payment changes. Review production migrations and hosting settings before
+deployment. No real checkout should go live until provider approval, test
+transactions, payout tests, and the full dispute path are verified.

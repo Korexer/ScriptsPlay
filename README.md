@@ -1,155 +1,34 @@
-# ScriptsPlay - Professional Transcription & Captioning Platform
+# ScriptsPlay
 
-ScriptsPlay is a modern, high-performance web platform for professional transcription and captioning services. It features a public-facing corporate website and a secure workers' portal where transcriptionists can manage tasks, track earnings, and complete assessments.
+ScriptsPlay is becoming a marketplace for creators who make video, audio, music, acting, and performance work. Buyers will be able to find talent, explore finished content, and post casting calls. The old transcription service and worker portal have been removed from the website.
 
-## 🚀 Tech Stack
+The public pages and the first account, profile, offer, sample, casting, application, private messaging, saved-offer, and review flows are in this repository. The marketplace schema is applied to the ScriptsPlay Supabase project. **The marketplace is not ready for paid orders.** No Flutterwave merchant account or supported delayed-payout product has been confirmed. Checkout, delivery, automatic completion, and creator payouts must remain off until they are built and tested.
 
-*   **Frontend**: React (v19), TypeScript, Vite, Tailwind CSS
-*   **Icons & Animation**: Lucide React, Framer Motion
-*   **Routing**: React Router DOM (v7)
-*   **Backend & Database**: Supabase (Database, Auth, Edge Functions)
-*   **Email Infrastructure**: Cloudflare Email Routing & Gmail SMTP
-*   **Deployment**: Vercel (Frontend), Supabase (Edge Functions)
+## Stack
 
----
+React 19, TypeScript, Vite, React Router, Supabase, and Vercel. The brand colours and fonts are kept in `src/index.css`.
 
-## 🛠️ Prerequisites
+## Local setup
 
-Before you begin, ensure you have the following installed:
-*   [Node.js](https://nodejs.org/) (v18+ recommended)
-*   [npm](https://www.npmjs.com/) (packaged with Node.js)
-*   [Git](https://git-scm.com/)
+1. Run `npm ci`.
+2. Copy `.env.example` to `.env.local` and add the ScriptsPlay Supabase project URL and publishable/anon key. Never put a service-role key in a `VITE_` variable.
+3. Run `npm run dev`.
+4. Run `npm run build` and `npm run lint` before opening a pull request.
 
-You will also need:
-1.  A **Supabase Project** to handle the database backend, email edge functions, and user authentication.
-2.  A **Cloudflare Account** managing your custom domain (`scriptsplay.com`).
-3.  A **Gmail Account** configured with an App Password for secure SMTP sending.
+The public homepage can render without Supabase. Search, account pages, and the contact form need a valid ScriptsPlay project. The contact form uses the existing `contact_submissions` table and `send-contact-email` Edge Function.
 
----
+## Video
 
-## 📥 Getting Started
+The homepage uses `public/videos/marketplace-hero.mp4`, an optimized version of the user-provided desktop video. It is muted and loops only on desktop when reduced motion is off. Mobile uses the brand-colour background and does not request the video or a poster image.
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Korexer/ScriptsPlay.git
-cd ScriptsPlay
-```
+## Database and launch gate
 
-### 2. Install Dependencies
-```bash
-npm install
-```
+The marketplace migrations in `supabase/migrations/` were applied to the ScriptsPlay project on 19 October 2026. They add RLS-protected marketplace tables, private sample storage, review permissions, application management, private offer conversations and saved offers, and narrow Data API grants. The old worker sign-up trigger and worker table API rules are retired, while historical rows remain stored. The unused `welcome-email` and `send-support-ticket` functions now return 410. The live contact form remains active with write-only public database access.
 
-### 3. Set Up Environment Variables
-Create a `.env` file in the root directory:
-```bash
-cp .env.example .env  # Or create it manually
-```
+The first review account will be `hello@scriptsplay.com`. That email must create and verify a ScriptsPlay account before an operator grants `scriptsplay_admin: true` in its Supabase Auth app metadata. Admin rights must never be set through editable user metadata. Sign out and back in after the role is added.
 
-Add your Supabase credentials to the `.env` file:
-```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_public_key
-```
-*(Do not commit your `.env` file to version control. It is already added to `.gitignore`.)*
+The two retired functions had SMTP passwords written in earlier deployed versions. Rotate those mail passwords in the email provider. The active contact notification function reads its Gmail credentials from Supabase secrets.
 
-### 4. Run the Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+See `PLATFORM_PLAN.txt` for the full product plan and fee rules. The planned fees are 6% to buyers and 20% from creator prices. These are examples until a compliant checkout is available. An ordinary Flutterwave split payment must not be treated as a three-day escrow hold. Confirm the provider's supported hold, release, refund, and payout process before connecting real payments.
 
----
-
-## 📧 Email Infrastructure (Cloudflare & Gmail)
-
-The platform is designed to use a highly cost-effective, custom-domain email setup combining **Cloudflare Email Routing** and **Gmail SMTP**.
-
-### 1. Incoming Mail (Cloudflare Email Routing)
-To receive emails sent to `hello@scriptsplay.com` and `jobs@scriptsplay.com` directly in your personal Gmail inbox:
-1.  Configure your custom domain (`scriptsplay.com`) to use Cloudflare Nameservers.
-2.  Go to the **Email** section in your Cloudflare dashboard and enable **Email Routing**.
-3.  Add the following **Routing Rules**:
-    *   `hello@scriptsplay.com` ➔ Forward to `your_personal_gmail@gmail.com`
-    *   `jobs@scriptsplay.com` ➔ Forward to `your_personal_gmail@gmail.com`
-4.  Configure the auto-generated Cloudflare MX records in your Cloudflare DNS zone.
-
-### 2. Outgoing Mail & Edge Notifications (Gmail SMTP & App Passwords)
-To send emails securely *from* `hello@scriptsplay.com` or via the Supabase Edge Function:
-1.  Enable **2-Step Verification** on your Google Account.
-2.  Navigate to your Google Account Settings ➔ Security ➔ **App passwords**.
-3.  Generate a new App Password (select 'Other' and name it 'ScriptsPlay SMTP').
-4.  Use this 16-character app password along with your Gmail username as your SMTP credentials.
-
----
-
-## 📦 Database & Backend Setup (Supabase)
-
-To make the contact form, authentication, and worker portal fully functional, configure your Supabase instance:
-
-### 1. Database Schema
-Create a `contact_submissions` table to store messages sent via the contact page:
-```sql
-create table contact_submissions (
-  id uuid default gen_random_uuid() primary key,
-  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
-  name text not null,
-  email text not null,
-  message text not null
-);
-```
-
-### 2. Edge Function (Email Notifications)
-The contact form triggers an email notification to `hello@scriptsplay.com` via a Supabase Edge Function (`supabase/functions/send-contact-email`).
-
-To deploy and configure this Edge Function:
-1.  Install the Supabase CLI on your system.
-2.  Log in and link your project:
-    ```bash
-    supabase login
-    supabase link --project-ref your_project_ref
-    ```
-3.  Deploy the Edge Function:
-    ```bash
-    supabase functions deploy send-contact-email
-    ```
-4.  Configure the Gmail SMTP secrets in Supabase:
-    ```bash
-    supabase secrets set GMAIL_USER=your_gmail_address
-    supabase secrets set GMAIL_APP_PASSWORD=your_gmail_app_password
-    ```
-
----
-
-## 🚀 Production Deployment (Vercel)
-
-This project is configured to deploy directly to Vercel. 
-
-### Vercel Configuration Notes:
-*   **Build Command**: `npm run build`
-*   **Output Directory**: `dist`
-*   **Framework Preset**: `Vite`
-*   **Client-Side Routing**: The project includes a `vercel.json` file to handle routing rewrites. This prevents `404 Not Found` errors when refreshing pages on custom routes (e.g., `/services` or `/spworkersportal101/signup`).
-*   **Environment Variables**: Ensure you configure `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in the **Environment Variables** settings of your Vercel project dashboard.
-
----
-
-## 📂 Project Structure
-
-```text
-├── public/                 # Static assets (images, logos)
-├── src/
-│   ├── assets/             # Asset files
-│   ├── components/         # Reusable UI elements (Header, Footer, SEO)
-│   │   └── portal/         # Portal layouts and route guards
-│   ├── context/            # AuthContext provider
-│   ├── lib/                # Configured library clients (Supabase)
-│   ├── pages/              # Page views (Home, About, Jobs, Contact)
-│   │   └── portal/         # Worker Portal pages (Dashboard, Earnings, Signup)
-│   ├── App.tsx             # Main routing layout
-│   └── main.tsx            # Application entry point
-├── supabase/
-│   └── functions/          # Deno Edge Functions
-├── vercel.json             # Vercel deployment configuration
-└── package.json            # Scripts and dependencies
-```
+Public URLs are listed in `public/sitemap.xml`. `vercel.json` redirects old service pages and sends client routes to `index.html`. Account pages use `noindex` metadata.
