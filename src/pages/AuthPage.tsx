@@ -70,7 +70,7 @@ export default function AuthPage({ mode }: { mode: "sign-in" | "join" }) {
             </form>
             {!isJoin && <p className="market-auth-switch"><Link to="/forgot-password">Forgot password?</Link></p>}
             <p className="market-auth-switch">{isJoin ? "Already have an account?" : "New to ScriptsPlay?"} <Link to={(isJoin ? "/sign-in" : "/join") + "?next=" + encodeURIComponent(next)}>{isJoin ? "Sign in" : "Create an account"}</Link></p>
-            <p className="sp-small">By creating an account, you agree to our <Link to="/terms-of-service">terms</Link> and <Link to="/privacy-policy">privacy policy</Link>.</p>
+            {isJoin && <p className="sp-small">By creating an account, you agree to our <Link to="/terms-of-service">terms</Link> and <Link to="/privacy-policy">privacy policy</Link>.</p>}
           </div>
         </div>
       </section>
